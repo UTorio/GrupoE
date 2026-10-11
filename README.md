@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/logo.png" alt="Logotipo de AAA" width="400">
+  <img src="img/logo.png" alt="Patata subacuática montada en monopatín" width="400">
 </p>
 
 # AAA — Nombre del juego
