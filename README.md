@@ -15,10 +15,10 @@ AAA es un juego de AAA en 2D para dos jugadores en red en el que AAA AAA AAA AAA
 
 | Nombre y apellidos | Correo URJC | GitHub |
 | :--- | :--- | :--- |
-| Alumna Uno Ejemplo | a.uno.20XX@alumnos.urjc.es | `@alumno1-ejemplo` |
-| Alumno Dos Ejemplo | a.dos.20XX@alumnos.urjc.es | `@alumno2-ejemplo` |
-| Alumna Tres Ejemplo | a.tres.20XX@alumnos.urjc.es | `@alumno3-ejemplo` |
-| Alumno Cuatro Ejemplo | a.cuatro.20XX@alumnos.urjc.es | `@alumno4-ejemplo` |
+| Andrés López Duque | a.lopezd.2024@alumnos.urjc.es | `@Andres12w` |
+| Adrián Manzanera Martínez | a.manzanera.2024@alumnos.urjc.es | `@Spelunky233` |
+| Guillermo Nombela Molina | g.nombela.2024@alumnos.urjc.es | `@UTorio` |
+| Óscar Castañeda Serrano | o.castaneda.2024@alumnos.urjc.es | `@13Golosina` |
 
 **Repositorio:** `https://github.com/<usuario>/<repositorio>`
 
