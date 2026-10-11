@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="img/logo.png" alt="Patata subacuática montada en monopatín" width="400">
+  <img src="img/logo.png" alt=" Logo Patata subacuática montada en monopatín" width="400">
 </p>
 
-# AAA — Nombre del juego
+# Patata subacuática montada en Monopatín — Nombre del juego
 
 **Juegos en Red · Grado en Diseño y Desarrollo de Videojuegos · URJC · Curso 2026/27**<br>
 **Grupo X**
@@ -40,9 +40,7 @@ AAA es un juego de carrera/plataformas en 2D para dos jugadores en red en el que
 8. [Comunicación y marketing](#8-comunicación-y-marketing)
 9. [Referencias](#9-referencias)
 
-> **Nota para el alumnado:** este documento es una **plantilla de ejemplo**. Sustituid todos los textos `AAA`, `BBB`, `CCC`... y las imágenes de `img/` por vuestro contenido. Los bloques como este, que empiezan por *Rúbrica*, indican qué criterio de evaluación cubre cada apartado: **borradlos antes de entregar**. Límite orientativo: **3500 palabras**. Todo el documento debe estar en castellano (mezclar idiomas penaliza).
 
----
 
 ## 1. Introducción
 
@@ -52,11 +50,11 @@ AAA es un juego de carreras/plataformas para dos jugadores en el que compiten pa
 
 ### 1.2. Propuesta de valor
 
-¿Qué hace diferente a vuestro juego? AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA.
+¿Qué hace diferente a vuestro juego? Los personajes tienen una habilidad que empuja a los demás.
 
-- Característica diferencial 1: AAA.
-- Característica diferencial 2: BBB.
-- Característica diferencial 3: CCC.
+- Característica diferencial 1: Empuje de los juegadores.
+- Característica diferencial 2: Objetos que benefician al que los recoge.
+- Característica diferencial 3: Trampas que entorpecen al los jugadores.
 
 ![Imagen promocional / key art del juego](img/portada_presentacion.png)
 
@@ -88,7 +86,7 @@ AAA es un juego de carreras/plataformas para dos jugadores en el que compiten pa
 
 > *Rúbrica — Jugabilidad / Objetivo del juego:* debe estar claramente definido.
 
-El objetivo de cada jugador es AAA AAA AAA. La partida termina cuando AAA AAA. Gana el jugador que AAA AAA.
+El objetivo de cada jugador es llegar a la meta el primer. La partida termina cuando un jugador llega a la meta. Gana el jugador que llega el primero.
 
 ### 3.2. Controles
 
@@ -99,8 +97,7 @@ El objetivo de cada jugador es AAA AAA AAA. La partida termina cuando AAA AAA. G
 | Moverse a la izquierda | `A` | `←` |
 | Moverse a la derecha | `D` | `→` |
 | Saltar | `W` | `↑` |
-| Acción especial AAA | `Espacio` | `Enter` |
-| Apuntar / disparar | Ratón (clic izquierdo) | Ratón (clic izquierdo) |
+| Acción especial De empuje | `Espacio` | `Enter` |
 | Pausa | `Esc` | `Esc` |
 
 ### 3.3. Mecánicas
@@ -109,17 +106,22 @@ El objetivo de cada jugador es AAA AAA AAA. La partida termina cuando AAA AAA. G
 
 #### 3.3.1. Mecánicas principales
 
-- **AAA:** AAA AAA AAA AAA AAA AAA.
-- **BBB:** BBB BBB BBB BBB BBB BBB.
-- **CCC:** CCC CCC CCC CCC CCC CCC.
+- **Empuje:** El jugador puede empujar a los demás jugadores en un radio circular desde su posición.
+- **Colisión:** Los jugadores se chocan entre ellos.
+- **Objetos:** Hay objetos que potencian al jugador o perjudican al resto.
 
 #### 3.3.2. Objetos y power-ups
 
 | Objeto | Efecto | Duración | Aparición |
 | :--- | :--- | :---: | :--- |
-| AAA | AAA AAA AAA | 5 s | Aleatoria cada 15 s |
-| BBB | BBB BBB BBB | 10 s | Zona central del mapa |
-| CCC | CCC CCC CCC | Instantáneo | Al derrotar a un enemigo |
+| Bebida energética | Al usarla te hace ir más rápido por un momento. | 5 s | (por definir) |
+| Escudo | Al usarlo resistes el próximo golpe recibido (No cuenta caer en un agujero) | Instantáneo | (por definir) |
+| Pesas | Al usarlas durante un tiempo no se te puede empujar, y tus empujes son más fuertes. | 10s | (por definir) |
+| Ruleta | Al usarla cambias de posición con un jugador al azar (tanto de delante como de detrás). | Instantáneo | (por definir) |
+| Cometa | Al usarla te vuelves inmortal, no se te puede empujar y eres más rápido por un breve momento (Caer en un agujero te mata) | 10s | (por definir) |
+| Melodía | Al usarla ralentizas al resto de rivales, sin efecto si están usando la bebida energética o el cometa. | 5s | (por definir) |
+| Hielo | Al usarlo congelas al próximo rival que empujes. El rival empujado no se podrá mover por un momento. | Instantáneo | (por definir) |
+| Botas aladas | Al usarlas por un tiempo puedes realizar dobles saltos. | 5s | (por definir) |
 
 #### 3.3.3. Sistema de puntuación
 
