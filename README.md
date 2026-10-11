@@ -5,11 +5,11 @@
 # Patata subacuática montada en Monopatín — Nombre del juego
 
 **Juegos en Red · Grado en Diseño y Desarrollo de Videojuegos · URJC · Curso 2026/27**<br>
-**Grupo X**
+**Grupo E**
 
 ## Descripción de la temática
 
-AAA es un juego de carrera/plataformas en 2D para dos jugadores en red en el que puedes empujar a tus adversarios. Ambientado en un laboratorio, los jugadores deben llegar a la meta los primeros para ganar la partida.
+AAA es un juego de carrera/plataformas en 2D para varios jugadores en red en el que puedes empujar a tus adversarios. Ambientado en un laboratorio, los jugadores deben llegar a la meta los primeros para ganar la partida.
 
 ## Equipo de desarrollo
 
@@ -46,13 +46,13 @@ AAA es un juego de carrera/plataformas en 2D para dos jugadores en red en el que
 
 ### 1.1. Concepto del juego
 
-AAA es un juego de carreras/plataformas para dos jugadores en el que compiten para llegar a la meta. La idea principal es los jugadores pueden entorpecerse y hay obstáculos en el mapa.
+AAA es un juego de carreras/plataformas para varios jugadores en el que compiten para llegar a la meta. La idea principal es los jugadores pueden entorpecerse y hay obstáculos en el mapa.
 
 ### 1.2. Propuesta de valor
 
-¿Qué hace diferente a vuestro juego? Los personajes tienen una habilidad que empuja a los demás.
+Los personajes tienen una habilidad que empuja a los demás.
 
-- Característica diferencial 1: Empuje de los juegadores.
+- Característica diferencial 1: Empuje de los jugadores.
 - Característica diferencial 2: Objetos que benefician al que los recoge.
 - Característica diferencial 3: Trampas que entorpecen al los jugadores.
 
@@ -69,12 +69,12 @@ AAA es un juego de carreras/plataformas para dos jugadores en el que compiten pa
 | Aspecto | Descripción |
 | :--- | :--- |
 | **Título** | AAA |
-| **Género** | AAA (p. ej. plataformas competitivo, *party game*, *arena shooter*...) |
-| **Número de jugadores** | 2 (en red, tiempo real) |
-| **Público objetivo** | AAA (p. ej. jugadores casuales de 12 a 30 años) |
-| **Clasificación PEGI** | PEGI AAA (justificar) |
+| **Género** | Carreras/Plataformas |
+| **Número de jugadores** | De 2 a 4 jugadores (en red, tiempo real) |
+| **Público objetivo** | Jugadores casuales que quieren pasar un rato divertido entre amigos |
+| **Clasificación PEGI** | PEGI 7. Habrá violencia leve (explosiones, colisiones, etc.), pero en un contexto caricaturesco en el que los personajes no sufren daño visible. |
 | **Plataforma** | Navegador web (PC), desarrollado con Phaser 3 |
-| **Duración de una partida** | AAA minutos |
+| **Duración de una partida** | Alrededor de 5 minutos |
 | **Representación** | 2D |
 | **Licencia** | Apache 2.0 |
 
@@ -86,7 +86,8 @@ AAA es un juego de carreras/plataformas para dos jugadores en el que compiten pa
 
 > *Rúbrica — Jugabilidad / Objetivo del juego:* debe estar claramente definido.
 
-El objetivo de cada jugador es llegar a la meta el primer. La partida termina cuando un jugador llega a la meta. Gana el jugador que llega el primero.
+La partida termina cuando un jugador llega a la meta. Gana el jugador que llega el primero.
+Para alzarse con la victoria, los jugadores podrán empujarse unos a otros para ralentizarse entre ellos.
 
 ### 3.2. Controles
 
@@ -96,8 +97,8 @@ El objetivo de cada jugador es llegar a la meta el primer. La partida termina cu
 | :--- | :---: | :---: |
 | Moverse a la izquierda | `A` | `←` |
 | Moverse a la derecha | `D` | `→` |
-| Saltar | `W` | `↑` |
-| Acción especial De empuje | `Espacio` | `Enter` |
+| Saltar | `Barra espaciadora` | `↑` |
+| Acción especial De empuje | `Botón izquierdo del ratón` | `Intro` |
 | Pausa | `Esc` | `Esc` |
 
 ### 3.3. Mecánicas
@@ -125,13 +126,13 @@ El objetivo de cada jugador es llegar a la meta el primer. La partida termina cu
 
 #### 3.3.3. Sistema de puntuación
 
-AAA AAA AAA AAA (p. ej. +10 puntos por AAA, −5 por BBB).
+Cada partida ganada suma 1 al contador de victorias del jugador. Los puntos solo sirven para contar las victorias totales de cada jugador durante la sesión de juego.
 
 ### 3.4. Físicas y dificultad
 
 > *Rúbrica — Jugabilidad / Físicas:* físicas variadas con elementos de dificultad.
 
-- **Gravedad y salto:** AAA AAA AAA.
+- **Gravedad y salto:** 
 - **Colisiones:** AAA AAA AAA (con plataformas, entre jugadores, con proyectiles...).
 - **Rebotes / fricción / empujes:** AAA AAA AAA.
 - **Plataformas móviles o superficies especiales (hielo, rebote...):** AAA AAA AAA.
