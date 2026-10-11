@@ -9,7 +9,7 @@
 
 ## Descripción de la temática
 
-AAA es un juego de AAA en 2D para dos jugadores en red en el que AAA AAA AAA AAA. Ambientado en AAA, los jugadores deben AAA AAA AAA para AAA AAA.
+AAA es un juego de carrera/plataformas en 2D para dos jugadores en red en el que puedes empujar a tus adversarios. Ambientado en un laboratorio, los jugadores deben llegar a la meta los primeros para ganar la partida.
 
 ## Equipo de desarrollo
 
@@ -20,7 +20,7 @@ AAA es un juego de AAA en 2D para dos jugadores en red en el que AAA AAA AAA AAA
 | Guillermo Nombela Molina | g.nombela.2024@alumnos.urjc.es | `@UTorio` |
 | Óscar Castañeda Serrano | o.castaneda.2024@alumnos.urjc.es | `@13Golosina` |
 
-**Repositorio:** `https://github.com/<usuario>/<repositorio>`
+**Repositorio:** `https://github.com/UTorio/GrupoP`
 
 **Licencia:** [Apache 2.0](LICENSE)
 
@@ -48,7 +48,7 @@ AAA es un juego de AAA en 2D para dos jugadores en red en el que AAA AAA AAA AAA
 
 ### 1.1. Concepto del juego
 
-AAA es un juego de AAA para dos jugadores en el que AAA AAA AAA. La idea principal es AAA AAA AAA AAA AAA AAA AAA AAA.
+AAA es un juego de carreras/plataformas para dos jugadores en el que compiten para llegar a la meta. La idea principal es los jugadores pueden entorpecerse y hay obstáculos en el mapa.
 
 ### 1.2. Propuesta de valor
 
