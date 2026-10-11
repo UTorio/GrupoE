@@ -54,7 +54,7 @@ Los personajes tienen una habilidad que empuja a los demás.
 
 - Característica diferencial 1: Empuje de los jugadores.
 - Característica diferencial 2: Objetos que benefician al que los recoge.
-- Característica diferencial 3: Trampas que entorpecen al los jugadores.
+- Característica diferencial 3: Trampas que entorpecen a los jugadores.
 
 ![Imagen promocional / key art del juego](img/portada_presentacion.png)
 
@@ -132,21 +132,21 @@ Cada partida ganada suma 1 al contador de victorias del jugador. Los puntos solo
 
 > *Rúbrica — Jugabilidad / Físicas:* físicas variadas con elementos de dificultad.
 
-- **Gravedad y salto:** 
-- **Colisiones:** AAA AAA AAA (con plataformas, entre jugadores, con proyectiles...).
-- **Rebotes / fricción / empujes:** AAA AAA AAA.
-- **Plataformas móviles o superficies especiales (hielo, rebote...):** AAA AAA AAA.
-- **Progresión de la dificultad:** a medida que avanza la partida AAA AAA AAA.
+- **Gravedad y salto:** Saltar genera un impulso vertical de potencia constante (no afecta dejar el botón pulsado más o menos tiempo).
+- **Colisiones:** Hay colisión con el suelo y con los enemigos y proyectiles. No habrá colisiones entre jugadores.
+- **Rebotes / fricción / empujes:** Al pulsar el botón de empuje, se genera un área de efecto y si algún rival se encuentra dentro de esta recibe un empuje en la dirección de la colisión.
+- **Plataformas móviles o superficies especiales (hielo, rebote...):** Hay distintos tipos de suelo y, por lo tanto, distintas fricciones con estos. Hay algunas plataformas móviles que se muevan de forma vertical u horizontal.
+- **Progresión de la dificultad:** La dificultad depende principalmente del nivel de habilidad de tus rivales. También hay una selección de mapas cada uno con un nivel de dificultad distinto.
 
 ### 3.5. Escenario
 
 > *Rúbrica — Jugabilidad / Calidad del escenario.*
 
-El escenario representa AAA AAA AAA. Se compone de AAA zonas:
+Hay 3 niveles distintos:
 
-1. **Zona AAA:** AAA AAA AAA.
-2. **Zona BBB:** BBB BBB BBB.
-3. **Zona CCC:** CCC CCC CCC.
+1. **Nivel 1:** AAA AAA AAA.
+2. **Nivel 2:** BBB BBB BBB.
+3. **Nivel 3:** CCC CCC CCC.
 
 ![Mapa del escenario](img/mapa_escenario.png)
 
@@ -160,13 +160,11 @@ El escenario representa AAA AAA AAA. Se compone de AAA zonas:
 
 ### 4.1. Historia
 
-AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA.
-
-AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA.
+Las hadas están en guerra y en un laboratorio secreto están tratando de desarrollar una criatura capaz de sortear obstáculos e invadir territorio enemigo. Para decidir cuál es la mejor de las criaturas las pondrán a competir en letales carreras hasta tener solo una selección de las mejores (además, ganarán dinero transmitiendo las carreras en vivo).
 
 ### 4.2. Personajes
 
-#### AAA (Jugador 1)
+#### L.O.B.I.T.O
 
 <img src="img/personaje_1.png" alt="Boceto del personaje AAA" width="250">
 
@@ -186,11 +184,11 @@ AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA AAA.
 - **Habilidad especial:** BBB BBB BBB.
 - **Trasfondo:** BBB BBB BBB BBB BBB BBB BBB BBB BBB.
 
-#### CCC (enemigo / personaje no jugable)
+#### Hada Yuliya 
 
 <img src="img/enemigo_1.png" alt="Boceto del enemigo CCC" width="250">
 
-CCC CCC CCC CCC CCC CCC CCC CCC.
+Es un hada que maneja un cañón y dispara a los corredores para entorpecer su camino.
 
 ---
 
@@ -226,9 +224,9 @@ El juego utiliza un estilo **AAA** (p. ej. *pixel art* de 32×32 píxeles) porqu
 
 > *Rúbrica — Imagen / Aspectos técnicos:* uso de cámara y 2D/3D.
 
-- **Representación:** 2D, vista AAA (lateral / cenital / isométrica).
-- **Cámara:** AAA (fija mostrando todo el escenario / sigue a ambos jugadores con *zoom* dinámico / pantalla dividida...).
-- **Resolución base:** AAA × AAA píxeles.
+- **Representación:** 2D, vista lateral.
+- **Cámara:** Cámara fijada en los personajes jugables. Cada jugador ve la cámara centrada en su personaje.
+- **Resolución base:** 1920 × 1080 píxeles.
 
 ### 5.5. Inspiración artística y cultural
 
@@ -258,19 +256,19 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 | Pista | Escena | Estilo / ambiente | Fuente / licencia |
 | :--- | :--- | :--- | :--- |
-| AAA | Menú principal | AAA (p. ej. *chiptune* relajado) | AAA (propia / CC-BY...) |
-| BBB | Partida | BBB (p. ej. ritmo rápido, 140 BPM) | BBB |
-| CCC | Victoria / derrota | CCC | CCC |
+| AAA | Menú principal | Electrónica, con impacto | Propia |
+| BBB | Partida | Eurobeat, rápido y enérgico | Propia |
+| CCC | Victoria / derrota | Alegre, calmada / decepcionante, lenta | Propia |
 
 ### 6.2. Efectos de sonido
 
 | Efecto | Momento en que se reproduce |
 | :--- | :--- |
 | Salto | Al pulsar la tecla de salto |
-| Golpe / impacto | AAA |
-| Recoger objeto | AAA |
+| Golpe / impacto | Al disparar la onda de choque / al conectar con un jugador rival |
+| Recoger objeto | Al recoger un objeto |
 | Botones de la interfaz | Al pasar el ratón y al hacer clic |
-| Cuenta atrás | AAA |
+| Cuenta atrás | Antes de empezar una carrera |
 
 ---
 
@@ -336,11 +334,11 @@ flowchart TD
 
 > *Rúbrica — Comunicación / Marketing.*
 
-- **Público y mensaje clave:** AAA AAA AAA.
-- **Canales:** redes sociales (AAA, BBB), itch.io, Newgrounds, Game Jolt...
+- **Público y mensaje clave:** Diviértete con tus amigos retándolos a frenéticas carreras.
+- **Canales:** Redes sociales (YouTube, X), itch.io.
 - **Calendario:** *teaser* en AAA, *devlog* semanal en AAA, lanzamiento en AAA.
 - **Material:** tráiler, capturas, GIF de jugabilidad, *press kit*.
-- **Eslogan:** «AAA AAA AAA».
+- **Eslogan:** «¡Empuja a tus amigos!».
 
 ---
 
