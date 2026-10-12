@@ -262,7 +262,7 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 | Recoger objeto | Al recoger un objeto |
 | Botones de la interfaz | Al pasar el ratón y al hacer clic |
 | Cuenta atrás | Antes de empezar una carrera |
-| Chicken screaming on a tree | al caer en un pozo de lava |
+| Chicken screaming on a tree | Al caer en un pozo de lava |
 
 ---
 
