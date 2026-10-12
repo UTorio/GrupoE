@@ -72,7 +72,7 @@ Los personajes tienen una habilidad que empuja a los demás.
 | **Género** | Carreras/Plataformas |
 | **Número de jugadores** | De 2 a 4 jugadores (en red, tiempo real) |
 | **Público objetivo** | Jugadores casuales que quieren pasar un rato divertido entre amigos |
-| **Clasificación PEGI** | PEGI 7. Habrá violencia leve (explosiones, colisiones, etc.), pero en un contexto caricaturesco en el que los personajes no sufren daño visible. |
+| **Clasificación PEGI** | PEGI 12. Habrá violencia moderada (explosiones, colisiones, etc.), presencia leve de sangre. |
 | **Plataforma** | Navegador web (PC), desarrollado con Phaser 3 |
 | **Duración de una partida** | Alrededor de 5 minutos |
 | **Representación** | 2D |
