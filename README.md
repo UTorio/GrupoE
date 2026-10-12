@@ -56,7 +56,7 @@ Los personajes tienen una habilidad que empuja a los demás.
 - Característica diferencial 2: Objetos que benefician al que los recoge.
 - Característica diferencial 3: Trampas que entorpecen a los jugadores.
 
-![Imagen promocional / key art del juego](img/portada_presentacion.png)
+![Imagen promocional / key art del juego](img/Portada.png)
 
 *Figura 1. Imagen promocional del juego.*
 
