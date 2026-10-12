@@ -148,7 +148,7 @@ Hay 3 niveles distintos:
 2. **Nivel 2:** Yuliya's Wrath.
 3. **Nivel 3:** When hell freezes.
 
-![Mapa del escenario](img/nivel_1.png)
+![Mapa del escenario](img/nivel1.png)
 
 *Figura 2. Mapa del escenario con zonas de aparición, plataformas y obstáculos.*
 
