@@ -148,7 +148,7 @@ Hay 3 niveles distintos:
 2. **Nivel 2:** Yuliya's Wrath.
 3. **Nivel 3:** When hell freezes.
 
-![Mapa del escenario](img/mapa_escenario.png)
+![Mapa del escenario](img/nivel_1.png)
 
 *Figura 2. Mapa del escenario con zonas de aparición, plataformas y obstáculos.*
 
@@ -188,7 +188,7 @@ Es un hada que maneja un cañón y dispara a los corredores para entorpecer su c
 
 > *Rúbrica — Imagen / Logotipo.*
 
-![Logotipo del juego](img/logoJuego.png)
+![Logotipo del juego](img/FairyLabRunLogo.png)
 
 *Figura 3. Logotipo del juego. Tipografía: AAA. Concepto: AAA AAA AAA.*
 
@@ -275,7 +275,7 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 **Pantalla de juego (HUD)**
 
-![Boceto de la pantalla de juego](img/boceto_pantalla_juego.png)
+![Boceto de la pantalla de juego](img/UI.png)
 
 *Figura 7. Pantalla de juego: AAA AAA AAA.*
 
