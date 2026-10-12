@@ -2,7 +2,7 @@
   <img src="img/logo.png" alt=" Logo Patata subacuática montada en monopatín" width="400">
 </p>
 
-# Patata subacuática montada en Monopatín — Nombre del juego
+# Patata subacuática montada en Monopatín — Fairy Lab Run
 
 **Juegos en Red · Grado en Diseño y Desarrollo de Videojuegos · URJC · Curso 2026/27**<br>
 **Grupo E**
