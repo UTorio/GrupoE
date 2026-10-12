@@ -202,13 +202,16 @@ El juego utiliza un estilo **Dibujado en digital** porque tenemos en el grupo a 
 
 > *Rúbrica — Imagen / Descripción visual:* uso de colores.
 
-![Paleta de colores](img/paleta_colores.png)
+
 
 *Figura 4. Paleta de colores del juego.*
 
-- **Fondos (`#B3B3B3`), (`#B39D9D`), (`#B36F6F`):** cada nivel tendrá una tonalidad mas roja que el anterior.
+- **Fondos:** cada nivel tendrá una tonalidad mas roja que el anterior.
+ ![Paleta de colores](img/Paleta.png)
 - **Jugadores :** habrá unos sliders de seleccion de color del pelaje para personalizacion y diferencicación.
 - **Objetos :** Cada objeto tendrá una paleta de color distinta, siempre incluyendo algun color que contraste con los de los fondos.
+- -**Yuliya :** Cada hada Yuliya usará estos colores, para que sea reconocible rápidamente.
+![Paleta de colores hada](img/PaletaHada.png)
 
 ### 5.4. Aspectos técnicos: cámara y representación
 
