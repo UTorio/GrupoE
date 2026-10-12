@@ -9,7 +9,7 @@
 
 ## Descripción de la temática
 
-AAA es un juego de carrera/plataformas en 2D para varios jugadores en red en el que puedes empujar a tus adversarios. Ambientado en un laboratorio, los jugadores deben llegar a la meta los primeros para ganar la partida.
+"Fairy Lab Run" es un juego de carrera/plataformas en 2D para varios jugadores en red en el que puedes empujar a tus adversarios. Ambientado en un laboratorio, los jugadores deben llegar a la meta los primeros para ganar la partida.
 
 ## Equipo de desarrollo
 
@@ -46,7 +46,7 @@ AAA es un juego de carrera/plataformas en 2D para varios jugadores en red en el 
 
 ### 1.1. Concepto del juego
 
-AAA es un juego de carreras/plataformas para varios jugadores en el que compiten para llegar a la meta. La idea principal es los jugadores pueden entorpecerse y hay obstáculos en el mapa.
+"Fairy Lab Run" es un juego de carreras/plataformas para varios jugadores en el que compiten para llegar a la meta. La idea principal es los jugadores pueden entorpecerse y hay obstáculos en el mapa.
 
 ### 1.2. Propuesta de valor
 
@@ -68,7 +68,7 @@ Los personajes tienen una habilidad que empuja a los demás.
 
 | Aspecto | Descripción |
 | :--- | :--- |
-| **Título** | AAA |
+| **Título** | Fairy Lab Run |
 | **Género** | Carreras/Plataformas |
 | **Número de jugadores** | De 2 a 4 jugadores (en red, tiempo real) |
 | **Público objetivo** | Jugadores casuales que quieren pasar un rato divertido entre amigos |
@@ -144,9 +144,9 @@ Cada partida ganada suma 1 al contador de victorias del jugador. Los puntos solo
 
 Hay 3 niveles distintos:
 
-1. **Nivel 1:** AAA AAA AAA.
-2. **Nivel 2:** BBB BBB BBB.
-3. **Nivel 3:** CCC CCC CCC.
+1. **Nivel 1:** First jump.
+2. **Nivel 2:** Yuliyas Wrath.
+3. **Nivel 3:** When hell freezes.
 
 ![Mapa del escenario](img/mapa_escenario.png)
 
@@ -160,29 +160,19 @@ Hay 3 niveles distintos:
 
 ### 4.1. Historia
 
-Las hadas están en guerra y en un laboratorio secreto están tratando de desarrollar una criatura capaz de sortear obstáculos e invadir territorio enemigo. Para decidir cuál es la mejor de las criaturas las pondrán a competir en letales carreras hasta tener solo una selección de las mejores (además, ganarán dinero transmitiendo las carreras en vivo).
+Las hadas están en guerra y en un laboratorio secreto están tratando de desarrollar una criatura capaz de sortear obstáculos e invadir territorio enemigo. Para decidir cuál es la mejor de las criaturas las pondrán a competir en letales carreras hasta tener solo una selección de las mejores, pero como las hadas tienen una capacidad de atención y de memoria bajísima o nula, se les olvida a cada rato que estan en guerra asique lo convierten también en un programa de televisión titulado fairy lab run (no confundir con steel ball run).
 
 ### 4.2. Personajes
 
 #### L.O.B.I.T.O
 
-<img src="img/personaje_1.png" alt="Boceto del personaje AAA" width="250">
+<img src="img/personaje_1.png" alt="Boceto del personaje" width="250">
 
-- **Edad / origen:** AAA.
-- **Personalidad:** AAA AAA AAA.
-- **Motivación:** AAA AAA AAA.
-- **Habilidad especial:** AAA AAA AAA.
-- **Trasfondo:** AAA AAA AAA AAA AAA AAA AAA AAA AAA.
-
-#### BBB (Jugador 2)
-
-<img src="img/personaje_2.png" alt="Boceto del personaje BBB" width="250">
-
-- **Edad / origen:** BBB.
-- **Personalidad:** BBB BBB BBB.
-- **Motivación:** BBB BBB BBB.
-- **Habilidad especial:** BBB BBB BBB.
-- **Trasfondo:** BBB BBB BBB BBB BBB BBB BBB BBB BBB.
+- **Edad / origen:** Recien nacido.
+- **Personalidad:** Ninguna.
+- **Motivación:** Sobrevivir.
+- **Habilidad especial:** empujar a sus congeneres.
+- **Trasfondo:** Artificialmente creado hace unos minutos, puesto a correr en la fairy lab run.
 
 #### Hada Yuliya 
 
@@ -198,7 +188,7 @@ Es un hada que maneja un cañón y dispara a los corredores para entorpecer su c
 
 > *Rúbrica — Imagen / Logotipo.*
 
-![Logotipo del juego](img/logo.png)
+![Logotipo del juego](img/logoJuego.png)
 
 *Figura 3. Logotipo del juego. Tipografía: AAA. Concepto: AAA AAA AAA.*
 
@@ -217,7 +207,7 @@ El juego utiliza un estilo **AAA** (p. ej. *pixel art* de 32×32 píxeles) porqu
 *Figura 4. Paleta de colores del juego.*
 
 - **Fondo (`#1B1F3B`):** AAA AAA AAA.
-- **Jugador 1 (`#E94560`) / Jugador 2 (`#0F9BD7`):** colores complementarios para distinguir fácilmente a cada jugador.
+- **Jugadores : habrá unos sliders de seleccion de color del pelaje para personalizacion y diferencicación.
 - **Objetos (`#F5C518`):** AAA AAA AAA.
 
 ### 5.4. Aspectos técnicos: cámara y representación
@@ -232,13 +222,13 @@ El juego utiliza un estilo **AAA** (p. ej. *pixel art* de 32×32 píxeles) porqu
 
 > *Rúbrica — Imagen / Inspiración:* referentes artísticos y culturales y vínculo con otros trabajos.
 
-![Moodboard de inspiración](img/moodboard_inspiracion.png)
+![Moodboard de inspiración](img/moodboard.png)
 
 *Figura 5. Moodboard con las referencias visuales.*
 
-- **AAA** (videojuego, año): tomamos AAA AAA AAA [1].
-- **BBB** (película / cómic / movimiento artístico): BBB BBB BBB [2].
-- **CCC** (referencia cultural): CCC CCC CCC.
+- **AAA** (videojuego, año): tomamos Touhou 1997 [1].
+- **BBB** (película / cómic / movimiento artístico): Steel Ball Run 2004 [2].
+- **CCC** (referencia cultural): Memes de furro alpha sigma insano.
 
 ### 5.6. Bocetos de personajes y pantallas
 
@@ -269,6 +259,7 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 | Recoger objeto | Al recoger un objeto |
 | Botones de la interfaz | Al pasar el ratón y al hacer clic |
 | Cuenta atrás | Antes de empezar una carrera |
+| Chicken screaming on a tree | al caer en un pozo de lava |
 
 ---
 
@@ -314,17 +305,12 @@ flowchart TD
     E --> B
     F --> B
     C --> G[Partida]
-    G -->|Esc| H[Pausa]
-    H -->|Reanudar| G
-    H -->|Salir| B
+    G -->|Esc| D
+    D -->|Reanudar| G
+    D -->|Salir| B
     G -->|Condición de victoria| I[Fin de partida]
-    I -->|Revancha| G
     I -->|Volver| B
 ```
-
-**Opción 2 — Imagen** exportada desde draw.io, Excalidraw, Figma...:
-
-![Diagrama de flujo del juego](img/diagrama_flujo.png)
 
 *Figura 9. Diagrama de flujo entre pantallas.*
 
