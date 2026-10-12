@@ -144,8 +144,8 @@ Cada partida ganada suma 1 al contador de victorias del jugador. Los puntos solo
 
 Hay 3 niveles distintos:
 
-1. **Nivel 1:** First jump.
-2. **Nivel 2:** Yuliyas Wrath.
+1. **Nivel 1:** First jumps.
+2. **Nivel 2:** Yuliya's Wrath.
 3. **Nivel 3:** When hell freezes.
 
 ![Mapa del escenario](img/mapa_escenario.png)
@@ -160,23 +160,23 @@ Hay 3 niveles distintos:
 
 ### 4.1. Historia
 
-Las hadas están en guerra y en un laboratorio secreto están tratando de desarrollar una criatura capaz de sortear obstáculos e invadir territorio enemigo. Para decidir cuál es la mejor de las criaturas las pondrán a competir en letales carreras hasta tener solo una selección de las mejores, pero como las hadas tienen una capacidad de atención y de memoria bajísima o nula, se les olvida a cada rato que estan en guerra asique lo convierten también en un programa de televisión titulado fairy lab run (no confundir con steel ball run).
+Las hadas están en guerra y en un laboratorio secreto están tratando de desarrollar una criatura capaz de sortear obstáculos e invadir territorio enemigo. Para decidir cuál es la mejor de las criaturas las pondrán a competir en letales carreras hasta tener solo una selección de las mejores, pero debido a la capacidad de atención y de memoria bajísima o nula de las hadas, se les olvida constantemente que están en guerra, por lo que lo convierten también en un programa de televisión titulado Fairy Lab Run.
 
 ### 4.2. Personajes
 
 #### L.O.B.I.T.O
 
-<img src="img/personaje_1.png" alt="Boceto del personaje" width="250">
+<img src="img/Furro.png" alt="Boceto del personaje" width="250">
 
-- **Edad / origen:** Recien nacido.
+- **Edad / origen:** Recién nacido.
 - **Personalidad:** Ninguna.
 - **Motivación:** Sobrevivir.
-- **Habilidad especial:** empujar a sus congeneres.
+- **Habilidad especial:** Empujar a sus congéneres.
 - **Trasfondo:** Artificialmente creado hace unos minutos, puesto a correr en la fairy lab run.
 
 #### Hada Yuliya 
 
-<img src="img/enemigo_1.png" alt="Boceto del enemigo CCC" width="250">
+<img src="img/Hada.png" alt="Boceto del enemigo CCC" width="250">
 
 Es un hada que maneja un cañón y dispara a los corredores para entorpecer su camino.
 
@@ -196,7 +196,7 @@ Es un hada que maneja un cañón y dispara a los corredores para entorpecer su c
 
 > *Rúbrica — Imagen / Estilo visual:* pixel art, cartoon, vectorial, etc.
 
-El juego utiliza un estilo **AAA** (p. ej. *pixel art* de 32×32 píxeles) porque AAA AAA AAA.
+El juego utiliza un estilo **Dibujado en digital** porque tenemos en el grupo a alguien que se le da bien dibujar, y también es mas fácil de animar que el pixel art y nos da mas libertad creativa a la hora de poder añadir o animar cosas.
 
 ### 5.3. Uso de colores
 
@@ -206,9 +206,9 @@ El juego utiliza un estilo **AAA** (p. ej. *pixel art* de 32×32 píxeles) porqu
 
 *Figura 4. Paleta de colores del juego.*
 
-- **Fondo (`#1B1F3B`):** AAA AAA AAA.
-- **Jugadores : habrá unos sliders de seleccion de color del pelaje para personalizacion y diferencicación.
-- **Objetos (`#F5C518`):** AAA AAA AAA.
+- **Fondos (`#B3B3B3`), (`#B39D9D`), (`#B36F6F`):** cada nivel tendrá una tonalidad mas roja que el anterior.
+- **Jugadores :** habrá unos sliders de seleccion de color del pelaje para personalizacion y diferencicación.
+- **Objetos :** Cada objeto tendrá una paleta de color distinta, siempre incluyendo algun color que contraste con los de los fondos.
 
 ### 5.4. Aspectos técnicos: cámara y representación
 
@@ -226,9 +226,9 @@ El juego utiliza un estilo **AAA** (p. ej. *pixel art* de 32×32 píxeles) porqu
 
 *Figura 5. Moodboard con las referencias visuales.*
 
-- **AAA** (videojuego, año): tomamos Touhou 1997 [1].
-- **BBB** (película / cómic / movimiento artístico): Steel Ball Run 2004 [2].
-- **CCC** (referencia cultural): Memes de furro alpha sigma insano.
+- (videojuego, año): Touhou 1997 [1].
+- (película / cómic / movimiento artístico): Steel Ball Run 2004 [2].
+- (referencia cultural): Memes de furro alpha sigma insano.
 
 ### 5.6. Bocetos de personajes y pantallas
 
@@ -246,9 +246,9 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 | Pista | Escena | Estilo / ambiente | Fuente / licencia |
 | :--- | :--- | :--- | :--- |
-| AAA | Menú principal | Electrónica, con impacto | Propia |
-| BBB | Partida | Eurobeat, rápido y enérgico | Propia |
-| CCC | Victoria / derrota | Alegre, calmada / decepcionante, lenta | Propia |
+| Elevator panik | Menú principal | Electrónica, con impacto | Propia |
+| Run into the hills | Partida | Eurobeat, rápido y enérgico | Propia |
+| Survivors chyme | Victoria / derrota | Alegre, calmada / decepcionante, lenta | Propia |
 
 ### 6.2. Efectos de sonido
 
@@ -269,9 +269,9 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 **Menú principal**
 
-![Boceto del menú principal](img/boceto_menu_principal.png)
+![Boceto del menú principal](img/MainMenu.png)
 
-*Figura 6. Menú principal: AAA AAA AAA.*
+*Figura 6. Menú principal.*
 
 **Pantalla de juego (HUD)**
 
@@ -332,7 +332,7 @@ flowchart TD
 
 > *Rúbrica — Documento / Referencias.* Usad un formato consistente (p. ej. APA) y citadlas en el texto con [1], [2]...
 
-[1] AAA, A. (Año). *Título de la obra*. Editorial / Estudio. URL
+[1] Touhou, A. (1997). *Título de la obra*. Editorial / Estudio. URL
 
 [2] BBB, B. (Año). *Título del artículo*. Revista, volumen(número), páginas. https://doi.org/AAA
 
@@ -340,4 +340,4 @@ flowchart TD
 
 [4] Phaser Studio. (s. f.). *Phaser 3 Documentation*. https://docs.phaser.io
 
-[5] Recursos de terceros utilizados (sprites, música, fuentes): AAA — autor — licencia — URL.
+[5] Recursos de terceros utilizados (sprites, música, fuentes): Ninguno, todo hecho en casita.
