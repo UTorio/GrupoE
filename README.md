@@ -64,7 +64,7 @@ Los personajes tienen una habilidad que empuja a los demás.
 
 ## 2. Especificaciones básicas
 
-> *Rúbrica — Documento / Especificaciones básicas:* género, público objetivo/edad y plataforma.
+
 
 | Aspecto | Descripción |
 | :--- | :--- |
@@ -84,14 +84,14 @@ Los personajes tienen una habilidad que empuja a los demás.
 
 ### 3.1. Objetivo del juego
 
-> *Rúbrica — Jugabilidad / Objetivo del juego:* debe estar claramente definido.
+
 
 La partida termina cuando un jugador llega a la meta. Gana el jugador que llega el primero.
 Para alzarse con la victoria, los jugadores podrán empujarse unos a otros para ralentizarse entre ellos.
 
 ### 3.2. Controles
 
-> *Rúbrica — Jugabilidad / Controles.* Indicad teclado y ratón.
+
 
 | Acción | Jugador 1 | Jugador 2 |
 | :--- | :---: | :---: |
@@ -103,7 +103,7 @@ Para alzarse con la victoria, los jugadores podrán empujarse unos a otros para 
 
 ### 3.3. Mecánicas
 
-> *Rúbrica — Jugabilidad / Mecánicas.*
+
 
 #### 3.3.1. Mecánicas principales
 
@@ -130,7 +130,7 @@ Cada partida ganada suma 1 al contador de victorias del jugador. Los puntos solo
 
 ### 3.4. Físicas y dificultad
 
-> *Rúbrica — Jugabilidad / Físicas:* físicas variadas con elementos de dificultad.
+
 
 - **Gravedad y salto:** Saltar genera un impulso vertical de potencia constante (no afecta dejar el botón pulsado más o menos tiempo).
 - **Colisiones:** Hay colisión con el suelo y con los enemigos y proyectiles. No habrá colisiones entre jugadores.
@@ -140,7 +140,7 @@ Cada partida ganada suma 1 al contador de victorias del jugador. Los puntos solo
 
 ### 3.5. Escenario
 
-> *Rúbrica — Jugabilidad / Calidad del escenario.*
+
 
 Hay 3 niveles distintos:
 
@@ -156,7 +156,7 @@ Hay 3 niveles distintos:
 
 ## 4. Narrativa
 
-> *Rúbrica — Narrativa:* riqueza de la historia principal y de los personajes.
+
 
 ### 4.1. Historia
 
@@ -186,21 +186,21 @@ Es un hada que maneja un cañón y dispara a los corredores para entorpecer su c
 
 ### 5.1. Logotipo
 
-> *Rúbrica — Imagen / Logotipo.*
+
 
 ![Logotipo del juego](img/FairyLabRunLogo.png)
 
-*Figura 3. Logotipo del juego. Tipografía: AAA. Concepto: AAA AAA AAA.*
+
 
 ### 5.2. Estilo visual
 
-> *Rúbrica — Imagen / Estilo visual:* pixel art, cartoon, vectorial, etc.
+
 
 El juego utiliza un estilo **Dibujado en digital** porque tenemos en el grupo a alguien que se le da bien dibujar, y también es mas fácil de animar que el pixel art y nos da mas libertad creativa a la hora de poder añadir o animar cosas.
 
 ### 5.3. Uso de colores
 
-> *Rúbrica — Imagen / Descripción visual:* uso de colores.
+
 
 
 
@@ -215,7 +215,7 @@ El juego utiliza un estilo **Dibujado en digital** porque tenemos en el grupo a 
 
 ### 5.4. Aspectos técnicos: cámara y representación
 
-> *Rúbrica — Imagen / Aspectos técnicos:* uso de cámara y 2D/3D.
+
 
 - **Representación:** 2D, vista lateral.
 - **Cámara:** Cámara fijada en los personajes jugables. Cada jugador ve la cámara centrada en su personaje.
@@ -223,7 +223,7 @@ El juego utiliza un estilo **Dibujado en digital** porque tenemos en el grupo a 
 
 ### 5.5. Inspiración artística y cultural
 
-> *Rúbrica — Imagen / Inspiración:* referentes artísticos y culturales y vínculo con otros trabajos.
+
 
 ![Moodboard de inspiración](img/moodboard.png)
 
@@ -235,7 +235,7 @@ El juego utiliza un estilo **Dibujado en digital** porque tenemos en el grupo a 
 
 ### 5.6. Bocetos de personajes y pantallas
 
-> *Rúbrica — Imagen / Bocetos:* interfaz de menú, pantallas y personajes.
+
 
 Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes) y los de las pantallas en el apartado [7.1](#71-pantallas).
 
@@ -243,7 +243,7 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 ## 6. Sonido
 
-> *Rúbrica — Sonido:* música y efectos.
+
 
 ### 6.1. Banda sonora
 
@@ -293,7 +293,7 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 ### 7.2. Diagrama de flujo
 
-> *Rúbrica — Documento / Diagrama de flujo.* Podéis usar Mermaid (GitHub lo renderiza directamente) o una imagen exportada.
+
 
 **Opción 1 — Mermaid** (se dibuja automáticamente en GitHub):
 
@@ -321,7 +321,7 @@ flowchart TD
 
 ## 8. Comunicación y marketing
 
-> *Rúbrica — Comunicación / Marketing.*
+
 
 - **Público y mensaje clave:** Diviértete con tus amigos retándolos a frenéticas carreras.
 - **Canales:** Redes sociales (YouTube, X), itch.io.
@@ -333,7 +333,7 @@ flowchart TD
 
 ## 9. Referencias
 
-> *Rúbrica — Documento / Referencias.* Usad un formato consistente (p. ej. APA) y citadlas en el texto con [1], [2]...
+
 
 [1] Touhou, A. (1997). *Título de la obra*. Editorial / Estudio. URL
 
