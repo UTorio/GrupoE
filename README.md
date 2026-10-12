@@ -285,8 +285,8 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 **Ajustes y fin de partida**
 
 <p align="center">
-  <img src="img/boceto_ajustes.png" alt="Boceto de ajustes" width="45%">
-  <img src="img/boceto_fin_partida.png" alt="Boceto de fin de partida" width="45%">
+  <img src="img/Ajustes.png" alt="Boceto de ajustes" width="45%">
+  <img src="img/Fin partida.png" alt="Boceto de fin de partida" width="45%">
 </p>
 
 *Figura 8. Pantalla de ajustes (izquierda) y fin de partida (derecha).*
