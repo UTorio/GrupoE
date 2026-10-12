@@ -280,7 +280,7 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 ![Boceto de la pantalla de juego](img/UI.png)
 
-*Figura 7. Pantalla de juego: AAA AAA AAA.*
+*Figura 7. Pantalla de juego: Pantalla de una escena de una carrera.*
 
 **Ajustes y fin de partida**
 
