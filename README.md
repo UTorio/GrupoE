@@ -231,7 +231,7 @@ El juego utiliza un estilo **Dibujado en digital** porque tenemos en el grupo a 
 
 - (videojuego, año): Touhou 1997 [1].
 - (película / cómic / movimiento artístico): Steel Ball Run 2004 [2].
-- (referencia cultural): Memes de furro alpha sigma insano.
+- (referencia cultural): Comunidad de entusiastas de personajes antropomórficos. [3].
 
 ### 5.6. Bocetos de personajes y pantallas
 
@@ -325,8 +325,8 @@ flowchart TD
 
 - **Público y mensaje clave:** Diviértete con tus amigos retándolos a frenéticas carreras.
 - **Canales:** Redes sociales (YouTube, X), itch.io.
-- **Calendario:** *teaser* en noviembre de 2026, *devlog* semanal en diciembre de 2026, lanzamiento en Enero de 2027.
-- **Material:** tráiler, capturas, GIF de jugabilidad, *press kit*.
+- **Calendario:** *teaser* en noviembre de 2026, *devlog* semanal, lanzamiento en Enero de 2027.
+- **Material:** tráiler saldrá con el teaser. 
 - **Eslogan:** «¡Empuja a tus amigos!».
 
 ---
@@ -335,12 +335,12 @@ flowchart TD
 
 
 
-[1] Touhou, A. (1997). *Título de la obra*. Editorial / Estudio. URL
+[1] ZUN / Team Shangai Alice. Touhou (1996). 
 
-[2] BBB, B. (Año). *Título del artículo*. Revista, volumen(número), páginas. https://doi.org/AAA
+[2] DoubleDutch Games / tinyBuild. Speedrunners (2016).
 
 [3] Schell, J. (2019). *The Art of Game Design: A Book of Lenses* (3.ª ed.). CRC Press.
 
 [4] Phaser Studio. (s. f.). *Phaser 3 Documentation*. https://docs.phaser.io
 
-[5] Recursos de terceros utilizados (sprites, música, fuentes): Ninguno, todo hecho en casita.
+[5] Recursos de terceros utilizados (sprites, música, fuentes): Ninguno.
