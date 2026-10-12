@@ -118,7 +118,7 @@ Para alzarse con la victoria, los jugadores podrán empujarse unos a otros para 
 | Bebida energética | Al usarla te hace ir más rápido por un momento. | 5 s | Zonas aleatorias en el mapa |
 | Escudo | Al usarlo resistes el próximo golpe recibido (No cuenta caer en un agujero) | Instantáneo |  Zonas aleatorias en el mapa  |
 | Pesas | Al usarlas durante un tiempo no se te puede empujar, y tus empujes son más fuertes. | 10s |  Zonas aleatorias en el mapa  |
-| Ruleta | Al usarla cambias de posición con un jugador al azar (tanto de delante como de detrás). | Instantáneo |  Zonas aleatorias en el mapa ) |
+| Ruleta | Al usarla cambias de posición con un jugador al azar (tanto de delante como de detrás). | Instantáneo |  Zonas aleatorias en el mapa  |
 | Cometa | Al usarla te vuelves inmortal, no se te puede empujar y eres más rápido por un breve momento (Caer en un agujero te mata) | 10s |  Zonas aleatorias en el mapa  |
 | Melodía | Al usarla ralentizas al resto de rivales, sin efecto si están usando la bebida energética o el cometa. | 5s |  Zonas aleatorias en el mapa  |
 | Hielo | Al usarlo congelas al próximo rival que empujes. El rival empujado no se podrá mover por un momento. | Instantáneo |  Zonas aleatorias en el mapa  |
