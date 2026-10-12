@@ -115,14 +115,14 @@ Para alzarse con la victoria, los jugadores podrán empujarse unos a otros para 
 
 | Objeto | Efecto | Duración | Aparición |
 | :--- | :--- | :---: | :--- |
-| Bebida energética | Al usarla te hace ir más rápido por un momento. | 5 s | (por definir) |
-| Escudo | Al usarlo resistes el próximo golpe recibido (No cuenta caer en un agujero) | Instantáneo | (por definir) |
-| Pesas | Al usarlas durante un tiempo no se te puede empujar, y tus empujes son más fuertes. | 10s | (por definir) |
-| Ruleta | Al usarla cambias de posición con un jugador al azar (tanto de delante como de detrás). | Instantáneo | (por definir) |
-| Cometa | Al usarla te vuelves inmortal, no se te puede empujar y eres más rápido por un breve momento (Caer en un agujero te mata) | 10s | (por definir) |
-| Melodía | Al usarla ralentizas al resto de rivales, sin efecto si están usando la bebida energética o el cometa. | 5s | (por definir) |
-| Hielo | Al usarlo congelas al próximo rival que empujes. El rival empujado no se podrá mover por un momento. | Instantáneo | (por definir) |
-| Botas aladas | Al usarlas por un tiempo puedes realizar dobles saltos. | 5s | (por definir) |
+| Bebida energética | Al usarla te hace ir más rápido por un momento. | 5 s | Zonas aleatorias en el mapa |
+| Escudo | Al usarlo resistes el próximo golpe recibido (No cuenta caer en un agujero) | Instantáneo |  Zonas aleatorias en el mapa  |
+| Pesas | Al usarlas durante un tiempo no se te puede empujar, y tus empujes son más fuertes. | 10s |  Zonas aleatorias en el mapa  |
+| Ruleta | Al usarla cambias de posición con un jugador al azar (tanto de delante como de detrás). | Instantáneo |  Zonas aleatorias en el mapa ) |
+| Cometa | Al usarla te vuelves inmortal, no se te puede empujar y eres más rápido por un breve momento (Caer en un agujero te mata) | 10s |  Zonas aleatorias en el mapa  |
+| Melodía | Al usarla ralentizas al resto de rivales, sin efecto si están usando la bebida energética o el cometa. | 5s |  Zonas aleatorias en el mapa  |
+| Hielo | Al usarlo congelas al próximo rival que empujes. El rival empujado no se podrá mover por un momento. | Instantáneo |  Zonas aleatorias en el mapa  |
+| Botas aladas | Al usarlas por un tiempo puedes realizar dobles saltos. | 5s |  Zonas aleatorias en el mapa  |
 
 #### 3.3.3. Sistema de puntuación
 
@@ -322,7 +322,7 @@ flowchart TD
 
 - **Público y mensaje clave:** Diviértete con tus amigos retándolos a frenéticas carreras.
 - **Canales:** Redes sociales (YouTube, X), itch.io.
-- **Calendario:** *teaser* en AAA, *devlog* semanal en AAA, lanzamiento en AAA.
+- **Calendario:** *teaser* en noviembre de 2026, *devlog* semanal en diciembre de 2026, lanzamiento en Enero de 2027.
 - **Material:** tráiler, capturas, GIF de jugabilidad, *press kit*.
 - **Eslogan:** «¡Empuja a tus amigos!».
 
