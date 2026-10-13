@@ -1,0 +1,13 @@
+Juegos en Red - Fase 1
+Grupo: E
+Juego: Fairy Lab Run
+
+Integrantes:
+-Andrés López Duque	- a.lopezd.2024@alumnos.urjc.es	- GitHub:@Andres12w
+-Adrián Manzanera Martínez  - a.manzanera.2024@alumnos.urjc.es  - GitHub:@Spelunky233
+-Guillermo Nombela Molina	- g.nombela.2024@alumnos.urjc.es	- GitHub:@UTorio
+-Óscar Castañeda Serrano	- o.castaneda.2024@alumnos.urjc.es	- GitHub: @13Golosina
+
+Repositorio GitHub: https://github.com/UTorio/GrupoE
+
+
