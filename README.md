@@ -20,7 +20,7 @@
 | Guillermo Nombela Molina | g.nombela.2024@alumnos.urjc.es | `@UTorio` |
 | Óscar Castañeda Serrano | o.castaneda.2024@alumnos.urjc.es | `@13Golosina` |
 
-**Repositorio:** `https://github.com/UTorio/GrupoP`
+**Repositorio:** `https://github.com/UTorio/GrupoE`
 
 **Licencia:** [Apache 2.0](LICENSE)
 
