@@ -133,7 +133,7 @@ Cada partida ganada suma 1 al contador de victorias del jugador. Los puntos solo
 
 
 - **Gravedad y salto:** Saltar genera un impulso vertical de potencia constante (no afecta dejar el botón pulsado más o menos tiempo).
-- **Colisiones:** Hay colisión con el suelo y con los enemigos y proyectiles. No habrá colisiones entre jugadores.
+- **Colisiones:** Hay colisión con el suelo, otros jugadores y con los enemigos y proyectiles.
 - **Rebotes / fricción / empujes:** Al pulsar el botón de empuje, se genera un área de efecto y si algún rival se encuentra dentro de esta recibe un empuje en la dirección de la colisión.
 - **Plataformas móviles o superficies especiales (hielo, rebote...):** Hay distintos tipos de suelo y, por lo tanto, distintas fricciones con estos. Hay algunas plataformas móviles que se muevan de forma vertical u horizontal.
 - **Progresión de la dificultad:** La dificultad depende principalmente del nivel de habilidad de tus rivales. También hay una selección de mapas cada uno con un nivel de dificultad distinto.
