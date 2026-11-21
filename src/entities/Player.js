@@ -1,9 +1,10 @@
 
+
 import Phaser from 'phaser';
 
 export class Player {
 
-    constructor(scene, x, y) {
+    constructor(scene, x, y, controls) {
 
         this.scene = scene;
 
@@ -18,7 +19,7 @@ export class Player {
         this.sprite.body.setCollideWorldBounds(true);
 
         // Controles
-        this.cursors = scene.input.keyboard.createCursorKeys();
+        this.controls = scene.input.keyboard.addKeys(controls);
 
     }
 
@@ -27,10 +28,10 @@ export class Player {
         const body = this.sprite.body;
 
         // Movimiento horizontal
-        if (this.cursors.left.isDown) {
+        if (this.controls.left.isDown) {
             body.setVelocityX(-200);
         }
-        else if (this.cursors.right.isDown) {
+        else if (this.controls.right.isDown) {
             body.setVelocityX(200);
         }
         else {
@@ -38,7 +39,7 @@ export class Player {
         }
 
         // Saltar
-        if (this.cursors.up.isDown && body.blocked.down) {
+        if (Phaser.Input.Keyboard.JustDown(this.controls.up) && body.blocked.down) {
             body.setVelocityY(-400);
         }
 
