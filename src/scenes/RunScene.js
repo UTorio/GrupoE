@@ -1,6 +1,9 @@
 
 import Phaser from 'phaser';
 import { Player } from '../entities/Player.js';
+import { GameMap } from '../map/Map.js';
+
+
 export class RunScene extends Phaser.Scene {
 
     constructor() {
@@ -12,30 +15,6 @@ export class RunScene extends Phaser.Scene {
      // Dimensiones del nivel
 this.worldWidth = 3000;
 this.worldHeight = 600;
-
-// Límites físicos del mundo
-this.physics.world.setBounds(
-    0, 0,
-    this.worldWidth,
-    this.worldHeight
-);
-
-// Suelo
-this.ground = this.add.rectangle(
-    this.worldWidth / 2,
-    580,
-    this.worldWidth,
-    40,
-    0x228B22
-);
-
-this.physics.add.existing(this.ground);
-
-this.ground.body.setImmovable(true);
-this.ground.body.allowGravity = false;
-        // Personaje (cubo)
-      // Crear jugador 1
-// Jugador 1: flechas
 this.player1 = new Player(
     this,
     200,
@@ -58,24 +37,46 @@ this.player2 = new Player(
         right: 'D'
     }
 );
-
-// Colisión con el suelo
-this.physics.add.collider(
-    this.player1.sprite,
-    this.ground
+// Crear mapa
+this.map = new GameMap(
+    this,
+    [this.player1, this.player2]
 );
 
-        // Colisión con el suelo
-        this.physics.add.collider(
-            this.player2.sprite,
-            this.ground
-        );
-           this.physics.add.collider(
-            this.player2.sprite,
-                this.player1.sprite,
-        );
-        // Controles del jugador 1
-this.cursors = this.input.keyboard.createCursorKeys();
+this.map.create();
+// Límites físicos del mundo
+this.physics.world.setBounds(
+    0, 0,
+    this.map.width,
+    this.map.height
+);
+
+this.cameras.main.setBounds(
+    0, 0,
+    this.map.width,
+    this.map.height
+);
+
+// Suelo
+this.ground = this.add.rectangle(
+    this.worldWidth / 2,
+    580,
+    this.worldWidth,
+    40,
+    0x228B22
+);
+
+this.physics.add.existing(this.ground);
+
+this.ground.body.setImmovable(true);
+this.ground.body.allowGravity = false;
+        // Personaje (cubo)
+      // Crear jugador 1
+// Jugador 1: flechas
+
+
+// Colisión con el suelo
+
 
     }
 
