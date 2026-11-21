@@ -1,6 +1,6 @@
 
 import Phaser from 'phaser';
-
+import { Player } from '../entities/Player.js';
 export class RunScene extends Phaser.Scene {
 
     constructor() {
@@ -23,18 +23,18 @@ export class RunScene extends Phaser.Scene {
         this.ground.body.allowGravity = false;
 
         // Personaje (cubo)
-        this.player = this.add.rectangle(
-            400, 500, 40, 40, 0x9932CC
-        );
+      // Crear jugador 1
+this.player1 = new Player(this, 400, 500);
 
-        this.physics.add.existing(this.player);
-
-        // Configuración física del jugador
-        this.player.body.setCollideWorldBounds(true);
+// Colisión con el suelo
+this.physics.add.collider(
+    this.player1.sprite,
+    this.ground
+);
 
         // Colisión con el suelo
         this.physics.add.collider(
-            this.player,
+            this.player1.sprite,
             this.ground
         );
         // Controles del jugador 1
@@ -44,21 +44,11 @@ this.cursors = this.input.keyboard.createCursorKeys();
 
 update() {
 
-    // Movimiento horizontal
-    if (this.cursors.left.isDown) {
-        this.player.body.setVelocityX(-200);
-    }
-    else if (this.cursors.right.isDown) {
-        this.player.body.setVelocityX(200);
-    }
-    else {
-        this.player.body.setVelocityX(0);
-    }
+   
 
-    // Saltar
-    if (this.cursors.up.isDown && this.player.body.blocked.down) {
-        this.player.body.setVelocityY(-400);
-    }
+    this.player1.update();
+
+
 
 }
     }
