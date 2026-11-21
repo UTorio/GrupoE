@@ -18,6 +18,6 @@ export class MenuScene extends Phaser.Scene {
             .setInteractive({ useHandCursor: true })
             .on('pointerover', () => localBtn.setStyle({ color: '#ffff00' }))
             .on('pointerout', () => localBtn.setStyle({ color: '#00ff00' }))
-            .on('pointerdown', () => this.scene.start('GameScene'));
+            .on('pointerdown', () => this.scene.start('RunScene'));
     }
 }
