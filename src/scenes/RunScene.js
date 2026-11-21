@@ -37,10 +37,28 @@ export class RunScene extends Phaser.Scene {
             this.player,
             this.ground
         );
+        // Controles del jugador 1
+this.cursors = this.input.keyboard.createCursorKeys();
 
     }
 
-    update() {
+update() {
 
+    // Movimiento horizontal
+    if (this.cursors.left.isDown) {
+        this.player.body.setVelocityX(-200);
     }
+    else if (this.cursors.right.isDown) {
+        this.player.body.setVelocityX(200);
+    }
+    else {
+        this.player.body.setVelocityX(0);
+    }
+
+    // Saltar
+    if (this.cursors.up.isDown && this.player.body.blocked.down) {
+        this.player.body.setVelocityY(-400);
+    }
+
 }
+    }
