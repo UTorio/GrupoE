@@ -9,19 +9,30 @@ export class RunScene extends Phaser.Scene {
 
     create() {
 
-        // Fondo
-        this.cameras.main.setBackgroundColor('#87CEEB');
+     // Dimensiones del nivel
+this.worldWidth = 3000;
+this.worldHeight = 600;
 
-        // Suelo
-        this.ground = this.add.rectangle(
-            400, 580, 800, 40, 0x228B22
-        );
+// Límites físicos del mundo
+this.physics.world.setBounds(
+    0, 0,
+    this.worldWidth,
+    this.worldHeight
+);
 
-        this.physics.add.existing(this.ground);
+// Suelo
+this.ground = this.add.rectangle(
+    this.worldWidth / 2,
+    580,
+    this.worldWidth,
+    40,
+    0x228B22
+);
 
-        this.ground.body.setImmovable(true);
-        this.ground.body.allowGravity = false;
+this.physics.add.existing(this.ground);
 
+this.ground.body.setImmovable(true);
+this.ground.body.allowGravity = false;
         // Personaje (cubo)
       // Crear jugador 1
 // Jugador 1: flechas
@@ -69,7 +80,35 @@ this.cursors = this.input.keyboard.createCursorKeys();
     }
 
 update() {
+// Centro entre los dos jugadores
+// Posiciones de los jugadores
+const p1 = this.player1.sprite;
+const p2 = this.player2.sprite;
 
+// Centro entre ambos jugadores
+const centerX = (p1.x + p2.x) / 2;
+
+// Distancia horizontal
+const distance = Math.abs(p1.x - p2.x);
+
+// Zoom según la distancia
+const minZoom = 0.2;
+const maxZoom = 1;
+
+const zoom = Phaser.Math.Clamp(
+    800 / (distance + 400),
+    minZoom,
+    maxZoom
+);
+
+// Aplicar zoom
+this.cameras.main.setZoom(zoom);
+
+// Centrar cámara
+this.cameras.main.centerOn(
+    centerX,
+    300
+);
    
 
     this.player1.update();
