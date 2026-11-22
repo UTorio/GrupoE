@@ -22,7 +22,8 @@ this.player1 = new Player(
     {
         up: 'UP',
         left: 'LEFT',
-        right: 'RIGHT'
+        right: 'RIGHT',
+        down: 'DOWN'
     }
 );
 
@@ -34,9 +35,11 @@ this.player2 = new Player(
     {
         up: 'W',
         left: 'A',
-        right: 'D'
+        right: 'D',
+        down: 'S'
     }
 );
+this.players = [this.player1, this.player2];
 // Crear mapa
 this.map = new GameMap(
     this,
@@ -66,55 +69,68 @@ this.ground = this.add.rectangle(
     0x228B22
 );
 
+// Colisión con el suelo
 this.physics.add.existing(this.ground);
 
 this.ground.body.setImmovable(true);
 this.ground.body.allowGravity = false;
-        // Personaje (cubo)
-      // Crear jugador 1
-// Jugador 1: flechas
 
+    // Colisiones entre todos los jugadores
+    for (let i = 0; i < this.players.length; i++) {
 
-// Colisión con el suelo
+        for (let j = i + 1; j < this.players.length; j++) {
+
+            this.physics.add.collider(
+                this.players[i].sprite,
+                this.players[j].sprite
+            );
+
+        }
+
+    }
+
 
 
     }
 
-update() {
-// Centro entre los dos jugadores
-// Posiciones de los jugadores
-const p1 = this.player1.sprite;
-const p2 = this.player2.sprite;
+    update() {
+    // Centro entre los dos jugadores
+    // Posiciones de los jugadores
+    const p1 = this.player1.sprite;
+    const p2 = this.player2.sprite;
 
-// Centro entre ambos jugadores
-const centerX = (p1.x + p2.x) / 2;
+    // Centro entre ambos jugadores
+    const centerX = (p1.x + p2.x) / 2;
 
-// Distancia horizontal
-const distance = Math.abs(p1.x - p2.x);
+    // Distancia horizontal
+    const distance = Math.abs(p1.x - p2.x);
 
-// Zoom según la distancia
-const minZoom = 0.2;
-const maxZoom = 1;
+    // Zoom según la distancia
+    const minZoom = 0.2;
+    const maxZoom = 1;
 
-const zoom = Phaser.Math.Clamp(
-    800 / (distance + 400),
-    minZoom,
-    maxZoom
-);
+    const zoom = Phaser.Math.Clamp(
+        800 / (distance + 400),
+        minZoom,
+        maxZoom
+    );
 
-// Aplicar zoom
-this.cameras.main.setZoom(zoom);
+        this.players.forEach(player => {
+        player.update();
+    });
 
-// Centrar cámara
-this.cameras.main.centerOn(
-    centerX,
-    300
-);
-   
+    // Aplicar zoom
+    this.cameras.main.setZoom(zoom);
 
-    this.player1.update();
-    this.player2.update();
+    // Centrar cámara
+    this.cameras.main.centerOn(
+        centerX,
+        300
+    );
+    
 
 
+    }
+
+    
 }
-    }
