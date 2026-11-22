@@ -18,10 +18,17 @@ export class Player {
 
         this.sprite.body.setCollideWorldBounds(true);
 
+        // Configurar físicas
+        this.sprite.body.setMaxVelocity(600, 1000);
+        this.sprite.body.setDragX(1000);
+        this.sprite.body.setGravityY(1200);
+
         // Controles
         this.controls = scene.input.keyboard.addKeys(controls);
+        
         // Velocidad del jugador
         this.baseSpeed = 200;
+        this.acceleration = 1200;
 
         // Penalización por pinchos
         this.slowUntil = 0;
@@ -29,7 +36,7 @@ export class Player {
 
         // Configuración del empuje
         this.pushRadius = 90;
-        this.pushForce = 450;
+        this.pushForce = 1000;
         this.pushUpForce = 180;
         this.pushCooldown = 700;
         this.lastPush = 0;
@@ -49,23 +56,33 @@ export class Player {
 
         const body = this.sprite.body;
 
-        // Calcular velocidad actual
+        // Calcular velocidad máxima
         let currentSpeed = this.baseSpeed;
 
         if (this.scene.time.now < this.slowUntil) {
             currentSpeed *= this.slowMultiplier;
         }
 
-        // Movimiento horizontal
+        // Movimiento horizontal basado en aceleración
         if (this.controls.left.isDown) {
-            body.setVelocityX(-currentSpeed);
+
+            body.setAccelerationX(-this.acceleration);
+
         }
         else if (this.controls.right.isDown) {
-            body.setVelocityX(currentSpeed);
+
+            body.setAccelerationX(this.acceleration);
+
         }
         else {
-            body.setVelocityX(0);
+
+            // Sin input: la fricción reduce la velocidad
+            body.setAccelerationX(0);
+
         }
+
+        // Limitar velocidad horizontal
+        body.setMaxVelocity(currentSpeed * 2, 1000);
 
         // Saltar
         if (Phaser.Input.Keyboard.JustDown(this.controls.up) && body.blocked.down) {
