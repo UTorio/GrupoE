@@ -83,6 +83,28 @@ this.enemy1 = new Yuliya(
     }
 );
 
+// META
+this.finish = this.add.rectangle(
+    this.map.width - 100,
+    500,
+    20,
+    160,
+    0xffff00,
+    0.3
+);
+
+// Comprobar llegada de los jugadores
+this.players.forEach(player => {
+
+    this.physics.add.overlap(
+        player.sprite,
+        this.finish,
+        () => this.playerWins(player)
+    );
+
+});
+
+this.physics.add.existing(this.finish, true);
 
 // Colisión con el suelo
 this.physics.add.existing(this.ground);
@@ -109,6 +131,7 @@ this.ground.body.allowGravity = false;
     }
 
     update() {
+        if (this.gameFinished) return;
     // Centro entre los dos jugadores
     // Posiciones de los jugadores
     const p1 = this.player1.sprite;
@@ -147,5 +170,50 @@ this.ground.body.allowGravity = false;
 
     }
 
-    
+    playerWins(player) {
+
+    // Evitar que se active varias veces
+    if (this.gameFinished) return;
+
+    this.gameFinished = true;
+
+    // Identificar ganador
+    const winner = player === this.player1
+        ? 'JUGADOR 1'
+        : 'JUGADOR 2';
+
+    // Mostrar mensaje
+    const text = this.add.text(
+        this.cameras.main.centerX,
+        this.cameras.main.centerY,
+        winner + ' HA GANADO!',
+        {
+            fontSize: '48px',
+            color: '#ffff00',
+            fontStyle: 'bold',
+            backgroundColor: '#000000',
+            padding: {
+                x: 20,
+                y: 15
+            }
+        }
+    );
+
+    text.setOrigin(0.5);
+    text.setScrollFactor(0);
+    text.setDepth(1000);
+
+    // Detener físicas
+    this.physics.pause();
+
+    // Volver al menú después de 3 segundos
+    this.time.delayedCall(3000, () => {
+
+        this.scene.start('MenuScene');
+
+    });
+
+}
+
+
 }
