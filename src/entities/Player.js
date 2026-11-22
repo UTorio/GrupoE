@@ -50,6 +50,15 @@ export class Player {
         this.pushCircle.setStrokeStyle(2, 0xffffff, 0.5);
         this.pushCircle.setVisible(false);
 
+        // Dirección hacia la que mira
+        this.facing = 1;
+
+        // Objeto que lleva el jugador
+        this.item = null;
+
+        // Icono del objeto
+        this.itemIcon = null;
+
     }
 
   update() {
@@ -67,16 +76,17 @@ export class Player {
         if (this.controls.left.isDown) {
 
             body.setAccelerationX(-this.acceleration);
+            this.facing = -1;
 
         }
         else if (this.controls.right.isDown) {
 
             body.setAccelerationX(this.acceleration);
+            this.facing = 1;
 
         }
         else {
 
-            // Sin input: la fricción reduce la velocidad
             body.setAccelerationX(0);
 
         }
@@ -94,11 +104,29 @@ export class Player {
             this.push();
         }
 
+        // Utilizar objeto
+        if (
+            this.controls.object &&
+            Phaser.Input.Keyboard.JustDown(this.controls.object)
+        ) {
+            this.useItem();
+        }
+
         // Actualizar posición del círculo
         this.pushCircle.setPosition(
             this.sprite.x,
             this.sprite.y
         );
+
+        // Actualizar posición del icono
+        if (this.itemIcon) {
+
+            this.itemIcon.setPosition(
+            this.sprite.x,
+            this.sprite.y - 40
+            );
+
+}
 
     }
 
@@ -169,4 +197,47 @@ export class Player {
         this.slowMultiplier = multiplier;
 
     }
+
+    giveItem(item) {
+
+    // No recoger si ya tenemos uno
+    if (this.item !== null) return;
+
+    this.item = item;
+
+    // Crear icono encima del jugador
+    this.itemIcon = this.scene.add.text(
+        this.sprite.x,
+        this.sprite.y - 40,
+        item.icon,
+        {
+            fontSize: '28px',
+            color: '#ffffff'
+        }
+    );
+
+    this.itemIcon.setOrigin(0.5);
+    this.itemIcon.setDepth(100);
+
+}
+
+
+useItem() {
+
+    // Comprobar si tenemos objeto
+    if (this.item === null) return;
+
+    // Activar efecto
+    this.item.use(this);
+
+    // Eliminar icono
+    if (this.itemIcon) {
+        this.itemIcon.destroy();
+        this.itemIcon = null;
+    }
+
+    // Vaciar inventario
+    this.item = null;
+
+}
 }
