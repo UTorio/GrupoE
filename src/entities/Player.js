@@ -32,7 +32,7 @@ export class Player {
 
         // Penalización por pinchos
         this.slowUntil = 0;
-        this.slowMultiplier = 1;
+        this.slowMultiplier = 2;
 
         // Configuración del empuje
         this.pushRadius = 90;

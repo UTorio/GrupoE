@@ -2,6 +2,7 @@
 import Phaser from 'phaser';
 import { Player } from '../entities/Player.js';
 import { GameMap } from '../map/Map.js';
+import { Yuliya } from '../entities/Yuliya.js';
 
 
 export class RunScene extends Phaser.Scene {
@@ -68,6 +69,20 @@ this.ground = this.add.rectangle(
     40,
     0x228B22
 );
+
+this.enemy1 = new Yuliya(
+    this,
+    1000,
+    300,
+    { x: -1, y: 0 },
+    {
+        fireRate: 2000,
+        projectileSpeed: 350,
+        slowDuration: 2000,
+        slowMultiplier: 0.5
+    }
+);
+
 
 // Colisión con el suelo
 this.physics.add.existing(this.ground);
