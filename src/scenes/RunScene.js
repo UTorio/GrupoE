@@ -3,7 +3,7 @@ import Phaser from 'phaser';
 import { Player } from '../entities/Player.js';
 import { GameMap } from '../map/Map.js';
 import { Yuliya } from '../entities/Yuliya.js';
-
+import { HappyMeal } from '../entities/HappyMeal.js';
 
 export class RunScene extends Phaser.Scene {
 
@@ -24,7 +24,8 @@ this.player1 = new Player(
         up: 'UP',
         left: 'LEFT',
         right: 'RIGHT',
-        down: 'DOWN'
+        down: 'DOWN',
+        object: 'L'
     }
 );
 
@@ -37,7 +38,8 @@ this.player2 = new Player(
         up: 'W',
         left: 'A',
         right: 'D',
-        down: 'S'
+        down: 'S',
+        object: 'T'
     }
 );
 this.players = [this.player1, this.player2];
@@ -92,6 +94,15 @@ this.finish = this.add.rectangle(
     0xffff00,
     0.3
 );
+
+// Cajas de objetos
+this.HappyMeals = [
+
+    new HappyMeal(this, 700, 400),
+    new HappyMeal(this, 1400, 400),
+    new HappyMeal(this, 2200, 400)
+
+];
 
 // Comprobar llegada de los jugadores
 this.players.forEach(player => {
