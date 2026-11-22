@@ -25,7 +25,7 @@ this.player1 = new Player(
         left: 'LEFT',
         right: 'RIGHT',
         down: 'DOWN',
-        object: '0'
+        object: 'L'
     }
 );
 
