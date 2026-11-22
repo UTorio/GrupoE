@@ -36,7 +36,7 @@ export class Player {
 
         // Configuración del empuje
         this.pushRadius = 90;
-        this.pushForce = 1000;
+        this.pushForce = 3000;
         this.pushUpForce = 180;
         this.pushCooldown = 700;
         this.lastPush = 0;

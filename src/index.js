@@ -6,8 +6,9 @@ import { RunScene } from './scenes/RunScene.js';
 
 const config = {
     type: Phaser.AUTO,      // WebGL if available; otherwise, Canvas
-    width: 800,
-    height: 600,
+    scale: {
+        mode: Phaser.Scale.RESIZE
+    },
     physics: {
         default: 'arcade',
         arcade: {
