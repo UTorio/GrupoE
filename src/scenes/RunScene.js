@@ -136,13 +136,28 @@ this.ground.body.allowGravity = false;
         }
 
     }
-
+    // Teclas para pausar
+this.pauseKeys = this.input.keyboard.addKeys({
+    escape: Phaser.Input.Keyboard.KeyCodes.ESC,
+    p: Phaser.Input.Keyboard.KeyCodes.P
+});
 
 
     }
 
-    update() {
-        if (this.gameFinished) return;
+update() {
+
+    if (this.gameFinished) return;
+
+    // Comprobar si se quiere pausar
+    if (
+        Phaser.Input.Keyboard.JustDown(this.pauseKeys.escape) ||
+        Phaser.Input.Keyboard.JustDown(this.pauseKeys.p)
+    ) {
+        this.scene.launch('PauseScene');
+        this.scene.pause();
+        return;
+    }
     // Centro entre los dos jugadores
     // Posiciones de los jugadores
     const p1 = this.player1.sprite;
