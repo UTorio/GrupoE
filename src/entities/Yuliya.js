@@ -22,10 +22,7 @@ export class Yuliya {
         this.slowDuration = options.slowDuration ?? 2000;
         this.slowMultiplier = options.slowMultiplier ?? 0.5;
 
-        // Crear enemigo
-        this.sprite = scene.add.rectangle(
-            x, y, 45, 35, 0x8844ff
-        );
+        
 
         scene.physics.add.existing(this.sprite);
 
@@ -40,11 +37,13 @@ export class Yuliya {
             callbackScope: this,
             loop: true
         });
-
+ this.sprite.anims.play('yuli', true)
+        const body = this.sprite.body;
+        body.setAllowGravity(false);
     }
 
     update(){
-        this.sprite.anims.play('yuli', true)
+       
     }
 
     shoot() {

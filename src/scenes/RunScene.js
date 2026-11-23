@@ -346,6 +346,19 @@ createPlayerAnimations() {
         frameRate: 8,
         repeat: 0
     });
+//enemigo
+    this.anims.create({
+        key: 'yuli',
+        frames: [
+            { key: 'yuli0' },
+            { key: 'yuli1' },
+            { key: 'yuli2' },
+            { key: 'yuli3' }
+        ],
+        frameRate: 16,
+        repeat: 1000000
+    });
+
 
 }
 
