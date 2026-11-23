@@ -13,12 +13,13 @@ export class RunScene extends Phaser.Scene {
     preload() {
 
         //cargar audio
+         this.load.audio('RaceStart', '/assets/audio/Fairy_Lab_Run__Race.wav');
     this.load.audio('Race', '/assets/audio/Fairy_Lab_Run__Race_loop.wav');
     this.load.audio('jump', '/assets/audio/Fairy_Lab_Run__Jump.wav');
     this.load.audio('onda', '/assets/audio/Fairy_Lab_Run__Onda.wav');
     this.load.audio('box', '/assets/audio/Fairy_Lab_Run__Item.wav');
     this.load.audio('Win', '/assets/audio/Fairy_Lab_Run__Victoria.wav');
-  this.load.audio('Damage', '/assets/audio/Fairy_Lab_Run__Impacto.wav');
+    this.load.audio('Damage', '/assets/audio/Fairy_Lab_Run__Impacto.wav');
     this.load.audio('Yuli', '/assets/audio/Fairy_Lab_Run__Alas.wav');
     this.load.audio('Start', '/assets/audio/Fairy_Lab_Run__Countdown.wav');
     this.load.audio('Disparo', '/assets/audio/Fairy_Lab_Run__Disparo.wav');
@@ -194,8 +195,12 @@ this.pauseKeys = this.input.keyboard.addKeys({
     p: Phaser.Input.Keyboard.KeyCodes.P
 });
 //música
- this.mainLoop = this.sound.add('Race', {
+ this.mainLoopS = this.sound.add('RaceStart', {
     loop: false,
+    volume: 0.7
+});
+ this.mainLoop = this.sound.add('Race', {
+    loop: true,
     volume: 0.7
 });
 this.Win = this.sound.add('Win', {
@@ -206,7 +211,10 @@ this.start = this.sound.add('Start', {
     loop: false,
     volume: 0.4
 });
+this.mainLoopS.play();
+this.mainLoopS.once('complete', () => {
 this.mainLoop.play();
+});
 this.start.play();
     }
 
