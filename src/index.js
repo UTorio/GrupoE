@@ -4,7 +4,7 @@ import { MenuScene } from './scenes/MenuScene.js';
 import { PauseScene } from './scenes/PauseScene.js';
 import { RunScene } from './scenes/RunScene.js';
 import { TutorialScene } from './scenes/TutorialScene';
-
+import { AjustesScene } from './scenes/AjustesScene.js';
 const config = {
     type: Phaser.AUTO,      // WebGL if available; otherwise, Canvas
     scale: {
@@ -16,7 +16,7 @@ const config = {
             gravity: { y: 900 }
         }
     },
-    scene: [MenuScene, PauseScene, RunScene, TutorialScene]      // The first scene starts automatically
+    scene: [MenuScene, PauseScene, RunScene, TutorialScene, AjustesScene]      // The first scene starts automatically
 };
 
 const game = new Phaser.Game(config);

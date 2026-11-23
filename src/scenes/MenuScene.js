@@ -30,6 +30,14 @@ preload()
             .on('pointerover', () => tutorialBtn.setStyle({ color: '#ffff00' }))
             .on('pointerout', () => tutorialBtn.setStyle({ color: '#00ff00' }))
             .on('pointerdown', () => this.scene.start("TutorialScene"));
+              const AjusBtn = this.add.text(900, 600, 'Ajustes', {
+            fontSize: '32px',
+            color: '#494949'
+        }).setOrigin(0.5)
+            .setInteractive({ useHandCursor: true })
+            .on('pointerover', () => AjusBtn.setStyle({ color: '#bbbbbb' }))
+            .on('pointerout', () => AjusBtn.setStyle({ color: '#494949' }))
+            .on('pointerdown', () => this.scene.start("AjustesScene"));
             //música
             this.backgroundMusic = this.sound.add('Main', {
     loop: false,
