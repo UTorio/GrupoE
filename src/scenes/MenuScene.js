@@ -54,7 +54,7 @@ this.backgroundMusic = this.sound.add('Main', {
 });
 
 
-if (!this.backgroundMusic.isPlaying()) {
+if (!this.backgroundMusic.isPlaying) {
     this.backgroundMusic.play();
 }
     }
