@@ -4,7 +4,7 @@ import { Player } from '../entities/Player.js';
 import { GameMap } from '../map/Map.js';
 import { Yuliya } from '../entities/Yuliya.js';
 import { HappyMeal } from '../entities/HappyMeal.js';
-import { createBackground } from '../utils/Background';
+import { createBackground } from '../utils/Background.js';
 export class RunScene extends Phaser.Scene {
 
     constructor() {
@@ -55,16 +55,16 @@ export class RunScene extends Phaser.Scene {
     }
 }
     create() {
-            createBackground(this);
+      
 // Reiniciar estado de la partida
     this.gameFinished = false;
-
+this.width = 10000
     // Reactivar físicas
     this.physics.resume();
      // Dimensiones del nivel
 this.worldWidth = 3000;
 this.worldHeight = 600;
-
+      
 this.createPlayerAnimations();
 console.log('¿Walkrun 1?', this.textures.exists('walkrun1'));
 console.log('¿Walkrun 6?', this.textures.exists('walkrun6'));
@@ -214,6 +214,7 @@ this.mainLoop.stop();
 this.mainLoopS.stop();
 });
 this.start.play();
+createBackground(this);
     }
 
 update() {
