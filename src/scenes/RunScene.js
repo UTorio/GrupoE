@@ -13,11 +13,12 @@ export class RunScene extends Phaser.Scene {
     preload() {
 
         //cargar audio
-      this.load.audio('Race', '/assets/audio/Fairy_Lab_Run__Race_loop.wav');
- this.load.audio('jump', '/assets/audio/Fairy_Lab_Run__Jump.wav');
+    this.load.audio('Race', '/assets/audio/Fairy_Lab_Run__Race_loop.wav');
+    this.load.audio('jump', '/assets/audio/Fairy_Lab_Run__Jump.wav');
     this.load.audio('onda', '/assets/audio/Fairy_Lab_Run__Onda.wav');
     this.load.audio('box', '/assets/audio/Fairy_Lab_Run__Item.wav');
-    // Aquí continúa tu código de carga...
+    this.load.audio('Win', '/assets/audio/Fairy_Lab_Run__Victoria.wav');
+  this.load.audio('Damage', '/assets/audio/Fairy_Lab_Run__Impacto.wav');
 
     // Animación de correr: 6 fotogramas
     for (let i = 1; i <= 6; i++) {
@@ -188,7 +189,10 @@ this.pauseKeys = this.input.keyboard.addKeys({
     loop: false,
     volume: 0.7
 });
-
+this.Win = this.sound.add('Win', {
+    loop: false,
+    volume: 0.7
+});
 this.mainLoop.play();
     }
 
@@ -249,7 +253,7 @@ this.players.forEach(player => {
     }
 
     playerWins(player) {
-
+        
     // Evitar que se active varias veces
     if (this.gameFinished) return;
 
@@ -259,7 +263,7 @@ this.players.forEach(player => {
     const winner = player === this.player1
         ? 'JUGADOR 1'
         : 'JUGADOR 2';
-
+this.Win.play();
     // Mostrar mensaje
     const text = this.add.text(
         this.cameras.main.centerX,
