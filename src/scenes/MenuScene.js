@@ -49,12 +49,12 @@ const AjusBtn = this.add.text(width * 0.85, height * 0.90, 'Ajustes', {
 
 // Música
 this.backgroundMusic = this.sound.add('Main', {
-    loop: false,
+    loop: true,
     volume: 0.7
 });
 
 
-if (!this.backgroundMusic.isPlaying) {
+if (!this.backgroundMusic.isPlaying()) {
     this.backgroundMusic.play();
 }
     }
