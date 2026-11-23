@@ -11,7 +11,18 @@ export class RunScene extends Phaser.Scene {
         super('RunScene');
     }
     preload() {
+        preload() {
 
+    this.load.on('loaderror', (file) => {
+        console.error(
+            'ERROR CARGANDO IMAGEN:',
+            file.key,
+            file.src
+        );
+    });
+
+    // Aquí continúa tu código de carga...
+}
     // Animación de correr: 6 fotogramas
     for (let i = 1; i <= 6; i++) {
         this.load.image(
@@ -43,6 +54,10 @@ this.worldWidth = 3000;
 this.worldHeight = 600;
 
 this.createPlayerAnimations();
+console.log('¿Walkrun 1?', this.textures.exists('walkrun1'));
+console.log('¿Walkrun 6?', this.textures.exists('walkrun6'));
+console.log('¿Jump 1?', this.textures.exists('jump1'));
+console.log('¿Jump 2?', this.textures.exists('jump2'));
 this.player1 = new Player(
     this,
     200,
