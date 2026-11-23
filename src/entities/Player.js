@@ -25,7 +25,7 @@ this.sprite.body.setDragX(1000);
 this.sprite.body.setGravityY(1200);
 
 // Tamaño de la hitbox
-this.sprite.body.setSize(64, 64, true);
+this.sprite.body.setSize(74, 124, true);
 
         this.sprite.body.setCollideWorldBounds(true);
 
