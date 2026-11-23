@@ -21,7 +21,7 @@ preload()
             .setInteractive({ useHandCursor: true })
             .on('pointerover', () => localBtn.setStyle({ color: '#ffff00' }))
             .on('pointerout', () => localBtn.setStyle({ color: '#00ff00' }))
-            .on('pointerdown', () => this.scene.start('RunScene'));
+            .on('pointerdown', () => this.startGame());
             //música
             this.backgroundMusic = this.sound.add('Main', {
     loop: false,
@@ -30,5 +30,11 @@ preload()
 
 
 this.backgroundMusic.play();
+    }
+
+    startGame()
+    {
+        this.scene.start('RunScene')
+        this.backgroundMusic.stop();
     }
 }
