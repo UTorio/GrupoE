@@ -8,13 +8,24 @@ export class Player {
 
         this.scene = scene;
 
-        // Crear personaje
-        this.sprite = scene.add.rectangle(
-            x, y, 40, 40, 0x9932CC
-        );
+       // Crear personaje animado
+this.sprite = scene.physics.add.sprite(
+    x,
+    y,
+    'walkrun1'
+);
 
-        // Añadir físicas
-        scene.physics.add.existing(this.sprite);
+// Tamaño visual del personaje
+this.sprite.setDisplaySize(64, 64);
+
+// Configurar físicas
+this.sprite.body.setCollideWorldBounds(true);
+this.sprite.body.setMaxVelocity(600, 1000);
+this.sprite.body.setDragX(1000);
+this.sprite.body.setGravityY(1200);
+
+// Tamaño de la hitbox
+this.sprite.body.setSize(40, 40, true);
 
         this.sprite.body.setCollideWorldBounds(true);
 
@@ -125,7 +136,35 @@ export class Player {
             this.sprite.x,
             this.sprite.y - 40
             );
+// Actualizar orientación
+this.sprite.setFlipX(this.facing === -1);
 
+// Comprobar si está en el suelo
+const onGround = body.blocked.down || body.touching.down;
+
+// Comprobar si se mueve
+const moving = Math.abs(body.velocity.x) > 10;
+
+// Elegir animación
+if (!onGround) {
+
+    // Está saltando
+    this.sprite.anims.play('player-jump', true);
+
+}
+else if (moving) {
+
+    // Está caminando o corriendo
+    this.sprite.anims.play('player-walk', true);
+
+}
+else {
+
+    // Está quieto
+    this.sprite.anims.stop();
+    this.sprite.setTexture('walkrun1');
+
+}
 }
 
     }

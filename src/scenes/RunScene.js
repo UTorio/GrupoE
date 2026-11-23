@@ -10,12 +10,39 @@ export class RunScene extends Phaser.Scene {
     constructor() {
         super('RunScene');
     }
+    preload() {
 
+    // Animación de correr: 6 fotogramas
+    for (let i = 1; i <= 6; i++) {
+        this.load.image(
+            `walkrun${i}`,
+            `img/walkrun/fotograma000${i}.png`
+        );
+    }
+
+    // Animación de salto: 2 fotogramas
+    for (let i = 1; i <= 2; i++) {
+        this.load.image(
+            `jump${i}`,
+            `img/jump/fotograma000${i}.png`
+        );
+    }
+
+    // Animación de muerte: 5 fotogramas
+    for (let i = 0; i <= 4; i++) {
+        this.load.image(
+            `death${i}`,
+            `img/Muerte/fotograma000${i}.png`
+        );
+    }
+}
     create() {
 
      // Dimensiones del nivel
 this.worldWidth = 3000;
 this.worldHeight = 600;
+
+this.createPlayerAnimations();
 this.player1 = new Player(
     this,
     200,
@@ -241,5 +268,49 @@ update() {
 
 }
 
+
+createPlayerAnimations() {
+
+    // Correr
+    this.anims.create({
+        key: 'player-walk',
+        frames: [
+            { key: 'walkrun1' },
+            { key: 'walkrun2' },
+            { key: 'walkrun3' },
+            { key: 'walkrun4' },
+            { key: 'walkrun5' },
+            { key: 'walkrun6' }
+        ],
+        frameRate: 10,
+        repeat: -1
+    });
+
+    // Saltar
+    this.anims.create({
+        key: 'player-jump',
+        frames: [
+            { key: 'jump1' },
+            { key: 'jump2' }
+        ],
+        frameRate: 8,
+        repeat: -1
+    });
+
+    // Morir
+    this.anims.create({
+        key: 'player-death',
+        frames: [
+            { key: 'death0' },
+            { key: 'death1' },
+            { key: 'death2' },
+            { key: 'death3' },
+            { key: 'death4' }
+        ],
+        frameRate: 8,
+        repeat: 0
+    });
+
+}
 
 }
