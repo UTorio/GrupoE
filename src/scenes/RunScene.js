@@ -206,6 +206,10 @@ this.mainLoopS.play();
 this.mainLoopS.once('complete', () => {
 this.mainLoop.play();
 });
+this.Win.once('complete', () => {
+this.mainLoop.stop();
+this.mainLoopS.stop();
+});
 this.start.play();
     }
 
