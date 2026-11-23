@@ -89,6 +89,7 @@ export class AjustesScene extends Phaser.Scene {
 
         back.on('pointerdown', () => {
             this.scene.start('MenuScene');
+            this.sound.stopAll();
         });
     }
 }
