@@ -41,7 +41,7 @@ this.sprite.setScale(0.3);
  this.sprite.anims.play('yuli', true)
         const body = this.sprite.body;
         body.setAllowGravity(false);
-        this.shoot = scene.sound.add('disparo', {
+        this.shoot = scene.sound.add('Disparo', {
     loop: false,
     volume: 1
 });
