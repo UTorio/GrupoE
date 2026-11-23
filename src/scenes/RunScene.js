@@ -225,6 +225,7 @@ update() {
         Phaser.Input.Keyboard.JustDown(this.pauseKeys.p)
     ) {
         this.scene.launch('PauseScene');
+        this.scene.bringToTop('PauseScene');
         this.scene.pause();
         return;
     }
