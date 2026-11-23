@@ -249,9 +249,10 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 
 | Pista | Escena | Estilo / ambiente | Fuente / licencia |
 | :--- | :--- | :--- | :--- |
-| Elevator panik | Menú principal | Electrónica, con impacto | Propia |
-| Run into the hills | Partida | Eurobeat, rápido y enérgico | Propia |
-| Survivors chyme | Victoria / derrota | Alegre, calmada / decepcionante, lenta | Propia |
+| Fairy Lab Run | Menú principal | "Wacky"/"Circus music", alegre y cómica | Propia |
+| ~Whimsical Waves | Partida | Eurobeat, rápido y enérgico con toques cómicos | Propia |
+| Glory = True; | Victoria | Pequeña melodía alegre/satisfactoria | Propia |
+| Synthetic tears | Derrota | Es un "sad trombone" con algunos retoques para adecuarse al estilo del juego | Propia |
 
 ### 6.2. Efectos de sonido
 
@@ -262,7 +263,9 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 | Recoger objeto | Al recoger un objeto |
 | Botones de la interfaz | Al pasar el ratón y al hacer clic |
 | Cuenta atrás | Antes de empezar una carrera |
-| Chicken screaming on a tree | Al caer en un pozo de lava |
+| Disparo de cañón | Cada vez que Yuliya (Enemigo) dispara |
+| Explosión | Cuando una bala de cañón impacta con algo |
+| Aleteo de hada | Suena constantemente cuando hay una Yuliya (Enemigo) en el mapa |
 
 ---
 
