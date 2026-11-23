@@ -7,9 +7,13 @@ import { TutorialScene } from './scenes/TutorialScene';
 import { AjustesScene } from './scenes/AjustesScene.js';
 const config = {
     type: Phaser.AUTO,      // WebGL if available; otherwise, Canvas
-    scale: {
-        mode: Phaser.Scale.RESIZE
-    },
+
+scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+    width: 1200,
+    height: 700
+},
     physics: {
         default: 'arcade',
         arcade: {

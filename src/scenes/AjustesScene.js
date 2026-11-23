@@ -80,7 +80,7 @@ preload()
 
         // Botón para volver
         const back = this.add.text(
-              width / 2, barY,
+              width / 2, height - 80,
             'VOLVER',
             {
                 fontSize: '28px',
