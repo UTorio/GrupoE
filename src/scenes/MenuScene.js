@@ -7,12 +7,12 @@ export class MenuScene extends Phaser.Scene {
 preload()
 {
     this.load.audio('Main', '/assets/audio/Fairy_Lab_Run__Main.wav');
+    this.load.image('FLR', 'img/FairyLabRunLogo.png');
 }
     create() {
-        this.add.text(400, 150, 'PONG', {
-            fontSize: '64px',
-            color: '#ffffff'
-        }).setOrigin(0.5);
+        this.add.image(400, 150, 'FLR')
+        .setOrigin(0.5)
+        .setScale(0.5);
 
         const localBtn = this.add.text(400, 320, 'Local Play', {
             fontSize: '32px',
