@@ -1,13 +1,16 @@
 import Phaser from 'phaser';
-
+import { createBackground } from '../utils/Background';
 export class TutorialScene extends Phaser.Scene {
 
     constructor() {
         super({ key: 'TutorialScene' });
     }
-
+preload()
+{
+        this.load.image('fondo', '/img/Fondo.png');
+} 
     create() {
-
+    createBackground(this);
         const width = this.scale.width;
         const height = this.scale.height;
 
@@ -47,13 +50,16 @@ export class TutorialScene extends Phaser.Scene {
             0, (height / 2) -200,
             0xffffff
         ).setLineWidth(3);
-  const Exit = this.add.text(600, 620, 'Volver', {
-            fontSize: '32px',
-            color: '#00ff00'
-        }).setOrigin(0.5)
-            .setInteractive({ useHandCursor: true })
-            .on('pointerover', () => Exit.setStyle({ color: '#ffff00' }))
-            .on('pointerout', () => Exit.setStyle({ color: '#00ff00' }))
-            .on('pointerdown', () => this.scene.start("MenuScene"));
+  const Exit = this.add.text(width / 2, height * 0.9, 'Volver', {
+    fontSize: '32px',
+    color: '#00ff00'
+}).setOrigin(0.5)
+    .setInteractive({ useHandCursor: true })
+    .on('pointerover', () => Exit.setStyle({ color: '#ffff00' }))
+    .on('pointerout', () => Exit.setStyle({ color: '#00ff00' }))
+    .on('pointerdown', () => {
+        this.sound.stopAll();
+        this.scene.start('MenuScene');
+    });
     }
 }

@@ -4,14 +4,14 @@ import { Player } from '../entities/Player.js';
 import { GameMap } from '../map/Map.js';
 import { Yuliya } from '../entities/Yuliya.js';
 import { HappyMeal } from '../entities/HappyMeal.js';
-
+import { createBackground } from '../utils/Background';
 export class RunScene extends Phaser.Scene {
 
     constructor() {
         super('RunScene');
     }
     preload() {
-
+    this.load.image('fondo', '/img/Fondo.png');
         //cargar audio
          this.load.audio('RaceStart', '/assets/audio/Fairy_Lab_Run__Race.wav');
     this.load.audio('Race', '/assets/audio/Fairy_Lab_Run__Race_loop.wav');
@@ -55,6 +55,7 @@ export class RunScene extends Phaser.Scene {
     }
 }
     create() {
+            createBackground(this);
 // Reiniciar estado de la partida
     this.gameFinished = false;
 
