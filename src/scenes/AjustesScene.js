@@ -77,7 +77,7 @@ export class AjustesScene extends Phaser.Scene {
 
         // Botón para volver
         const back = this.add.text(
-            width / 2, height - 80,
+              width / 2, barY,
             'VOLVER',
             {
                 fontSize: '28px',
@@ -86,7 +86,6 @@ export class AjustesScene extends Phaser.Scene {
                 padding: { x: 20, y: 10 }
             }
         ).setOrigin(0.5).setInteractive({ useHandCursor: true });
-
         back.on('pointerdown', () => {
             this.scene.start('MenuScene');
             this.sound.stopAll();
