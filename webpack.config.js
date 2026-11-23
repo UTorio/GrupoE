@@ -20,9 +20,14 @@ module.exports = {
       filename: 'index.html'
     }),
     // Copies the assets (audio, images...) to dist/assets
-    new CopyWebpackPlugin({
-      patterns: [{ from: 'public/assets', to: 'assets' }]
-    })
+   
+new CopyWebpackPlugin({
+    patterns: [
+        { from: 'public/assets', to: 'assets' },
+        { from: 'public/img', to: 'img' }
+    ]
+})
+
   ],
 
   // Development server with live reload
