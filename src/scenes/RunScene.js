@@ -257,15 +257,13 @@ const zoom = Phaser.Math.Clamp(
 this.cameras.main.setZoom(zoom);
 
 // Centrar cámara con desplazamiento
-// Aplicar zoom
-this.cameras.main.setZoom(zoom);
 
 // Desplazar el encuadre vertical según el zoom
-const verticalOffset = (1 - zoom) * 200;
+const verticalOffset = (1 - zoom) * 600;
 
 this.cameras.main.centerOn(
-    centerX + 40,
-    250 - verticalOffset
+    centerX + 0,
+    0-1000 + verticalOffset
 );
 // Actualizar jugadores
 this.players.forEach(player => {
