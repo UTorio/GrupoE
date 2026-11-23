@@ -250,7 +250,7 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 | Pista | Escena | Estilo / ambiente | Fuente / licencia |
 | :--- | :--- | :--- | :--- |
 | Fairy Lab Run | Menú principal | "Wacky"/"Circus music", alegre y cómica | Propia |
-| ~Whimsical Waves~ | Partida | Eurobeat, rápido y enérgico con toques cómicos | Propia |
+| ~Whimsical Waves | Partida | Eurobeat, rápido y enérgico con toques cómicos | Propia |
 | Glory = True; | Victoria | Pequeña melodía alegre/satisfactoria | Propia |
 | Synthetic tears | Derrota | Es un "sad trombone" con algunos retoques para adecuarse al estilo del juego | Propia |
 
