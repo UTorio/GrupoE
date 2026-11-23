@@ -35,7 +35,10 @@ export class HappyMeal {
             );
 
         });
-
+        this.Grab = scene.sound.add('box', {
+    loop: false,
+    volume: 1
+});
     }
 
     collect(player) {
@@ -46,6 +49,8 @@ export class HappyMeal {
         // Si ya tiene objeto, no recoge otro
         if (player.item !== null) return;
 
+        //reproducir sonido
+        this.Grab.play();
         // Elegir objeto aleatorio
         const randomIndex = Phaser.Math.Between(
             0,

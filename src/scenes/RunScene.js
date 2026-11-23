@@ -12,15 +12,11 @@ export class RunScene extends Phaser.Scene {
     }
     preload() {
 
-
-    this.load.on('loaderror', (file) => {
-        console.error(
-            'ERROR CARGANDO IMAGEN:',
-            file.key,
-            file.src
-        );
-    });
-
+        //cargar audio
+      this.load.audio('Race', '/assets/audio/Fairy_Lab_Run__Race_loop.wav');
+ this.load.audio('jump', '/assets/audio/Fairy_Lab_Run__Jump.wav');
+    this.load.audio('onda', '/assets/audio/Fairy_Lab_Run__Onda.wav');
+    this.load.audio('box', '/assets/audio/Fairy_Lab_Run__Item.wav');
     // Aquí continúa tu código de carga...
 
     // Animación de correr: 6 fotogramas
@@ -187,8 +183,13 @@ this.pauseKeys = this.input.keyboard.addKeys({
     escape: Phaser.Input.Keyboard.KeyCodes.ESC,
     p: Phaser.Input.Keyboard.KeyCodes.P
 });
+//música
+ this.mainLoop = this.sound.add('Race', {
+    loop: false,
+    volume: 0.7
+});
 
-
+this.mainLoop.play();
     }
 
 update() {

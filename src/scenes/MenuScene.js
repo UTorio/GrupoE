@@ -4,7 +4,10 @@ export class MenuScene extends Phaser.Scene {
     constructor() {
         super('MenuScene');
     }
-
+preload()
+{
+    this.load.audio('Main', '/assets/audio/Fairy_Lab_Run__Main.wav');
+}
     create() {
         this.add.text(400, 150, 'PONG', {
             fontSize: '64px',
@@ -19,5 +22,13 @@ export class MenuScene extends Phaser.Scene {
             .on('pointerover', () => localBtn.setStyle({ color: '#ffff00' }))
             .on('pointerout', () => localBtn.setStyle({ color: '#00ff00' }))
             .on('pointerdown', () => this.scene.start('RunScene'));
+            //música
+            this.backgroundMusic = this.sound.add('Main', {
+    loop: false,
+    volume: 0.7
+});
+
+
+this.backgroundMusic.play();
     }
 }

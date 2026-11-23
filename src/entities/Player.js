@@ -75,6 +75,16 @@ this.sprite.body.setSize(84, 333, true);
         this.wasKnockedBack = false;
         this.knockbackDuration = 200;
 
+// Efectos de sonido
+this.Jump = scene.sound.add('jump', {
+    loop: false,
+    volume: 1
+});
+
+this.Onda = scene.sound.add('onda', {
+    loop: false,
+    volume: 1
+});
     }
 
  
@@ -137,13 +147,16 @@ update() {
     if (
         Phaser.Input.Keyboard.JustDown(this.controls.up) &&
         body.blocked.down
+        
     ) {
-        body.setVelocityY(-600);
+        body.setVelocityY(-800);
+        this.Jump.play();
     }
 
     // Empujar
     if (Phaser.Input.Keyboard.JustDown(this.controls.down)) {
         this.push();
+        this.Onda.play();
     }
 
     // Utilizar objeto
