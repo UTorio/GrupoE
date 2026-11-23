@@ -48,7 +48,11 @@ export class RunScene extends Phaser.Scene {
     }
 }
     create() {
+// Reiniciar estado de la partida
+    this.gameFinished = false;
 
+    // Reactivar físicas
+    this.physics.resume();
      // Dimensiones del nivel
 this.worldWidth = 3000;
 this.worldHeight = 600;
