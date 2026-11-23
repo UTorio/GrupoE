@@ -117,13 +117,7 @@ this.cameras.main.setBounds(
 );
 
 // Suelo
-this.ground = this.add.rectangle(
-    this.worldWidth / 2,
-    580,
-    this.worldWidth,
-    40,
-    0x228B22
-);
+
 
 this.enemy1 = new Yuliya(
     this,
@@ -171,10 +165,7 @@ this.players.forEach(player => {
 this.physics.add.existing(this.finish, true);
 
 // Colisión con el suelo
-this.physics.add.existing(this.ground);
 
-this.ground.body.setImmovable(true);
-this.ground.body.allowGravity = false;
 
     // Colisiones entre todos los jugadores
     for (let i = 0; i < this.players.length; i++) {

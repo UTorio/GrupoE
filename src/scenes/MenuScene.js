@@ -10,11 +10,11 @@ preload()
     this.load.image('FLR', 'img/FairyLabRunLogo.png');
 }
     create() {
-        this.add.image(400, 150, 'FLR')
+        this.add.image(600, 150, 'FLR')
         .setOrigin(0.5)
         .setScale(0.5);
 
-        const localBtn = this.add.text(400, 320, 'Local Play', {
+        const localBtn = this.add.text(600, 320, 'Local Play', {
             fontSize: '32px',
             color: '#00ff00'
         }).setOrigin(0.5)
@@ -22,6 +22,14 @@ preload()
             .on('pointerover', () => localBtn.setStyle({ color: '#ffff00' }))
             .on('pointerout', () => localBtn.setStyle({ color: '#00ff00' }))
             .on('pointerdown', () => this.startGame());
+            const tutorialBtn = this.add.text(600, 520, 'Tutorial', {
+            fontSize: '32px',
+            color: '#00ff00'
+        }).setOrigin(0.5)
+            .setInteractive({ useHandCursor: true })
+            .on('pointerover', () => tutorialBtn.setStyle({ color: '#ffff00' }))
+            .on('pointerout', () => tutorialBtn.setStyle({ color: '#00ff00' }))
+            .on('pointerdown', () => this.scene.start("TutorialScene"));
             //música
             this.backgroundMusic = this.sound.add('Main', {
     loop: false,
