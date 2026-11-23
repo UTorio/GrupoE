@@ -186,6 +186,7 @@ this.pauseKeys = this.input.keyboard.addKeys({
     escape: Phaser.Input.Keyboard.KeyCodes.ESC,
     p: Phaser.Input.Keyboard.KeyCodes.P
 });
+
 //música
  this.mainLoopS = this.sound.add('RaceStart', {
     loop: false,

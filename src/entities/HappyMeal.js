@@ -37,7 +37,7 @@ export class HappyMeal {
         });
         this.Grab = scene.sound.add('box', {
     loop: false,
-    volume: 1
+    volume: 0.05
 });
     }
 

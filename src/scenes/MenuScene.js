@@ -52,7 +52,7 @@ const AjusBtn = this.add.text(width * 0.85, height * 0.90, 'Ajustes', {
 // Música
 this.backgroundMusic = this.sound.add('Main', {
     loop: true,
-    volume: 0.7
+    volume: 0.5
 });
 
 
