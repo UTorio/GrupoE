@@ -204,41 +204,46 @@ update() {
         this.scene.pause();
         return;
     }
-    // Centro entre los dos jugadores
-    // Posiciones de los jugadores
-    const p1 = this.player1.sprite;
-    const p2 = this.player2.sprite;
-
-    // Centro entre ambos jugadores
-    const centerX = (p1.x + p2.x) / 2;
-
-    // Distancia horizontal
-    const distance = Math.abs(p1.x - p2.x);
-
-    // Zoom según la distancia
-    const minZoom = 0.2;
-    const maxZoom = 1;
-
-    const zoom = Phaser.Math.Clamp(
-        800 / (distance + 400),
-        minZoom,
-        maxZoom
-    );
-
-        this.players.forEach(player => {
-        player.update();
-    });
-
-    // Aplicar zoom
-    this.cameras.main.setZoom(zoom);
-
-    // Centrar cámara
-    this.cameras.main.centerOn(
-        centerX,
-        300
-    );
     
+// Posiciones de los jugadores
+const p1 = this.player1.sprite;
+const p2 = this.player2.sprite;
 
+// Centro entre ambos jugadores
+const centerX = (p1.x + p2.x) / 2;
+
+// Distancia horizontal
+const distance = Math.abs(p1.x - p2.x);
+
+// Zoom según la distancia
+const minZoom = 0.35;
+const maxZoom = 1;
+
+const zoom = Phaser.Math.Clamp(
+    1000 / (distance + 400),
+    minZoom,
+    maxZoom
+);
+
+
+// Aplicar zoom
+this.cameras.main.setZoom(zoom);
+
+// Centrar cámara con desplazamiento
+// Aplicar zoom
+this.cameras.main.setZoom(zoom);
+
+// Desplazar el encuadre vertical según el zoom
+const verticalOffset = (1 - zoom) * 200;
+
+this.cameras.main.centerOn(
+    centerX + 40,
+    250 - verticalOffset
+);
+// Actualizar jugadores
+this.players.forEach(player => {
+    player.update();
+});
 
     }
 
