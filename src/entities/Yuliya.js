@@ -41,6 +41,10 @@ this.sprite.setScale(0.3);
  this.sprite.anims.play('yuli', true)
         const body = this.sprite.body;
         body.setAllowGravity(false);
+        this.shoot = scene.sound.add('disparo', {
+    loop: false,
+    volume: 1
+});
     }
 
     
@@ -68,7 +72,7 @@ this.sprite.setScale(0.3);
                 slowMultiplier: this.slowMultiplier
             }
         );
-
+        this.shoot.play();
     }
 
     destroy() {
