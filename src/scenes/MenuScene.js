@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-
+import { createBackground } from '../utils/Background';
 export class MenuScene extends Phaser.Scene {
     constructor() {
         super('MenuScene');
@@ -8,8 +8,10 @@ preload()
 {
     this.load.audio('Main', '/assets/audio/Fairy_Lab_Run__Main.wav');
     this.load.image('FLR', 'img/FairyLabRunLogo.png');
+    this.load.image('fondo', '/img/Fondo.png');
 }
     create() {
+            createBackground(this);
         this.add.image(600, 150, 'FLR')
         .setOrigin(0.5)
         .setScale(0.5);

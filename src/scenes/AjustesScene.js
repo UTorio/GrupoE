@@ -1,14 +1,17 @@
 
 import Phaser from 'phaser';
-
+import { createBackground } from '../utils/Background';
 export class AjustesScene extends Phaser.Scene {
 
     constructor() {
         super({ key: 'AjustesScene' });
     }
-
+preload()
+{
+        this.load.image('fondo', '/img/Fondo.png');
+}
     create() {
-
+    createBackground(this);
         const width = this.scale.width;
         const height = this.scale.height;
 

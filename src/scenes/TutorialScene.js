@@ -1,13 +1,16 @@
 import Phaser from 'phaser';
-
+import { createBackground } from '../utils/Background';
 export class TutorialScene extends Phaser.Scene {
 
     constructor() {
         super({ key: 'TutorialScene' });
     }
-
+preload()
+{
+        this.load.image('fondo', '/img/Fondo.png');
+} 
     create() {
-
+    createBackground(this);
         const width = this.scale.width;
         const height = this.scale.height;
 
