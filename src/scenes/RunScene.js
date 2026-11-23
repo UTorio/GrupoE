@@ -188,11 +188,11 @@ this.pauseKeys = this.input.keyboard.addKeys({
 //música
  this.mainLoopS = this.sound.add('RaceStart', {
     loop: false,
-    volume: 0.3
+    volume: 0.1
 });
  this.mainLoop = this.sound.add('Race', {
     loop: true,
-    volume: 0.7
+    volume: 1.0
 });
 this.Win = this.sound.add('Win', {
     loop: false,
@@ -200,7 +200,7 @@ this.Win = this.sound.add('Win', {
 });
 this.start = this.sound.add('Start', {
     loop: false,
-    volume: 0.4
+    volume: 0.3
 });
 this.start.play();
 this.start.once('complete', () => {
