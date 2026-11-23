@@ -65,7 +65,7 @@ export class AjustesScene extends Phaser.Scene {
                 (pointer.x - barX) / barWidth,
                 0, 1
             );
-            this.sound.stopAll();
+    
             this.sound.volume = volume;
 
             this.volumeFill.width = barWidth * volume;
