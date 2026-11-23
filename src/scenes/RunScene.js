@@ -43,6 +43,13 @@ export class RunScene extends Phaser.Scene {
             `img/Muerte/fotograma000${i}.png`
         );
     }
+        // Animación de yuliya: 4 fotogramas
+    for (let i = 0; i <= 3; i++) {
+        this.load.image(
+            `yuli${i}`,
+            `img/hada sprites/fotograma000${i}.png`
+        );
+    }
 }
     create() {
 // Reiniciar estado de la partida

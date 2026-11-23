@@ -7,6 +7,12 @@ export class Yuliya {
 
         this.scene = scene;
 
+        this.sprite = scene.physics.add.sprite(
+            x,
+            y,
+            'yuli1'
+        );
+
         // Dirección fija de disparo
         this.direction = direction;
 
@@ -35,6 +41,10 @@ export class Yuliya {
             loop: true
         });
 
+    }
+
+    update(){
+        this.sprite.anims.play('yuli', true)
     }
 
     shoot() {
