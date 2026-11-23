@@ -8,26 +8,26 @@ export class Player {
 
         this.scene = scene;
 
-// Crear personaje animado
+       // Crear personaje animado
 this.sprite = scene.physics.add.sprite(
     x,
     y,
     'walkrun1'
 );
 
-// Tamaño visual
+// Tamaño visual del personaje
 this.sprite.setDisplaySize(64, 64);
 
 // Configurar físicas
-const body = this.sprite.body;
+this.sprite.body.setCollideWorldBounds(true);
+this.sprite.body.setMaxVelocity(600, 1000);
+this.sprite.body.setDragX(1000);
+this.sprite.body.setGravityY(1200);
 
-body.setCollideWorldBounds(true);
-body.setMaxVelocity(600, 1000);
-body.setDragX(1000);
-body.setGravityY(1200);
+// Tamaño de la hitbox
+this.sprite.body.setSize(64, 64, true);
 
-// Hitbox: ahora ocupa casi todo el personaje
-body.setSize(56, 60, true);
+        this.sprite.body.setCollideWorldBounds(true);
 
         // Configurar físicas
         this.sprite.body.setMaxVelocity(600, 1000);
