@@ -23,6 +23,7 @@ export class RunScene extends Phaser.Scene {
     this.load.audio('Yuli', '/assets/audio/Fairy_Lab_Run__Alas.wav');
     this.load.audio('Start', '/assets/audio/Fairy_Lab_Run__Countdown.wav');
     this.load.audio('Disparo', '/assets/audio/Fairy_Lab_Run__Disparo.wav');
+    
     // Animación de correr: 6 fotogramas
     for (let i = 1; i <= 6; i++) {
         this.load.image(

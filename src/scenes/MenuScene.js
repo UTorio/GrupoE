@@ -9,6 +9,8 @@ preload()
     this.load.audio('Main', '/assets/audio/Fairy_Lab_Run__Main.wav');
     this.load.image('FLR', 'img/FairyLabRunLogo.png');
     this.load.image('fondo', '/img/Fondo.png');
+    this.load.audio('Click', '/assets/audio/Fairy_Lab_Run__Click.wav');
+    this.load.audio('PasarR', '/assets/audio/Fairy_Lab_Run__PasarRaton.wav');
 }
     create() {
             createBackground(this);
@@ -25,9 +27,15 @@ const localBtn = this.add.text(width / 2, height * 0.35, 'Local Play', {
     color: '#00ff00'
 }).setOrigin(0.5)
     .setInteractive({ useHandCursor: true })
-    .on('pointerover', () => localBtn.setStyle({ color: '#ffff00' }))
+    .on('pointerover', () => {
+        this.sound.play('PasarR', { volume: 0.5 });
+        localBtn.setStyle({ color: '#ffff00' });
+    })
     .on('pointerout', () => localBtn.setStyle({ color: '#00ff00' }))
-    .on('pointerdown', () => this.startGame());
+    .on('pointerdown', () => {
+    this.sound.play('Click', { volume: 0.1 });
+    this.startGame();
+    });
 
 // Tutorial
 const tutorialBtn = this.add.text(width / 2, height * 0.50, 'Tutorial', {
@@ -35,9 +43,15 @@ const tutorialBtn = this.add.text(width / 2, height * 0.50, 'Tutorial', {
     color: '#00ff00'
 }).setOrigin(0.5)
     .setInteractive({ useHandCursor: true })
-    .on('pointerover', () => tutorialBtn.setStyle({ color: '#ffff00' }))
+    .on('pointerover', () => {
+        this.sound.play('PasarR', { volume: 0.5 });
+        tutorialBtn.setStyle({ color: '#ffff00' });
+    })
     .on('pointerout', () => tutorialBtn.setStyle({ color: '#00ff00' }))
-    .on('pointerdown', () => this.scene.start('TutorialScene'));
+    .on('pointerdown', () => {
+    this.sound.play('Click', { volume: 0.1 });
+    this.scene.start('TutorialScene');
+    });
 
 // Ajustes
 const AjusBtn = this.add.text(width * 0.85, height * 0.90, 'Ajustes', {
@@ -45,9 +59,15 @@ const AjusBtn = this.add.text(width * 0.85, height * 0.90, 'Ajustes', {
     color: '#000000'
 }).setOrigin(0.5)
     .setInteractive({ useHandCursor: true })
-    .on('pointerover', () => AjusBtn.setStyle({ color: '#000000' }))
+    .on('pointerover', () => {
+        this.sound.play('PasarR', { volume: 0.5 });
+        AjusBtn.setStyle({ color: '#000000' });
+    })
     .on('pointerout', () => AjusBtn.setStyle({ color: '#a7a7a7' }))
-    .on('pointerdown', () => this.scene.start('AjustesScene'));
+    .on('pointerdown', () => {
+    this.sound.play('Click', { volume: 0.1 });
+    this.scene.start('AjustesScene');
+    });
 
 // Música
 this.backgroundMusic = this.sound.add('Main', {
