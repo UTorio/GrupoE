@@ -11,7 +11,7 @@ export class RunScene extends Phaser.Scene {
         super('RunScene');
     }
     preload() {
-        preload() {
+
 
     this.load.on('loaderror', (file) => {
         console.error(
@@ -22,7 +22,7 @@ export class RunScene extends Phaser.Scene {
     });
 
     // Aquí continúa tu código de carga...
-}
+
     // Animación de correr: 6 fotogramas
     for (let i = 1; i <= 6; i++) {
         this.load.image(
