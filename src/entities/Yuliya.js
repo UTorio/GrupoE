@@ -31,6 +31,12 @@ this.sprite.setScale(0.3);
         this.sprite.body.setAllowGravity(false);
         this.sprite.body.setImmovable(true);
 
+        // Sonido de disparo
+        this.shootSound = scene.sound.add('Disparo', {
+            loop: false,
+            volume: 0.1
+        });
+
         // Disparo automático
         this.fireEvent = scene.time.addEvent({
             delay: this.fireRate,
@@ -45,6 +51,7 @@ this.sprite.setScale(0.3);
     loop: false,
     volume: 1
 });
+
     }
 
     
@@ -72,7 +79,7 @@ this.sprite.setScale(0.3);
                 slowMultiplier: this.slowMultiplier
             }
         );
-        this.shoot.play();
+        this.shootSound.play();
     }
 
     destroy() {

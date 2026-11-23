@@ -78,16 +78,16 @@ this.sprite.body.setSize(84, 333, true);
 // Efectos de sonido
 this.Jump = scene.sound.add('jump', {
     loop: false,
-    volume: 1
+    volume: 0.05
 });
 
 this.Onda = scene.sound.add('onda', {
     loop: false,
-    volume: 1
+    volume: 0.2
 });
 this.DMG = scene.sound.add('Damage', {
     loop: false,
-    volume: 1});
+    volume: 0.2});
     }
 
  
