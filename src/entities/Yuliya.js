@@ -12,10 +12,11 @@ export class Yuliya {
             y,
             'yuli1'
         );
-
+this.sprite.setScale(0.3);
         // Dirección fija de disparo
         this.direction = direction;
-
+       
+            this.sprite.setFlipX(direction.x<0);
         // Configuración del enemigo
         this.fireRate = options.fireRate ?? 2000;
         this.projectileSpeed = options.projectileSpeed ?? 350;
@@ -42,9 +43,7 @@ export class Yuliya {
         body.setAllowGravity(false);
     }
 
-    update(){
-       
-    }
+    
 
     shoot() {
 
