@@ -85,6 +85,9 @@ this.Onda = scene.sound.add('onda', {
     loop: false,
     volume: 1
 });
+this.DMG = scene.sound.add('Damage', {
+    loop: false,
+    volume: 1});
     }
 
  
@@ -291,7 +294,7 @@ this.sprite.setFlipX(this.facing === -1);
         if (this.scene.time.now < this.slowUntil) {
             return;
         }
-
+        this.DMG.play();
         this.slowUntil = this.scene.time.now + duration;
         this.slowMultiplier = multiplier;
 
