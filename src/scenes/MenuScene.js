@@ -14,32 +14,41 @@ preload()
         .setOrigin(0.5)
         .setScale(0.5);
 
-        const localBtn = this.add.text(600, 320, 'Local Play', {
-            fontSize: '32px',
-            color: '#00ff00'
-        }).setOrigin(0.5)
-            .setInteractive({ useHandCursor: true })
-            .on('pointerover', () => localBtn.setStyle({ color: '#ffff00' }))
-            .on('pointerout', () => localBtn.setStyle({ color: '#00ff00' }))
-            .on('pointerdown', () => this.startGame());
-            const tutorialBtn = this.add.text(600, 520, 'Tutorial', {
-            fontSize: '32px',
-            color: '#00ff00'
-        }).setOrigin(0.5)
-            .setInteractive({ useHandCursor: true })
-            .on('pointerover', () => tutorialBtn.setStyle({ color: '#ffff00' }))
-            .on('pointerout', () => tutorialBtn.setStyle({ color: '#00ff00' }))
-            .on('pointerdown', () => this.scene.start("TutorialScene"));
-              const AjusBtn = this.add.text(900, 600, 'Ajustes', {
-            fontSize: '32px',
-            color: '#494949'
-        }).setOrigin(0.5)
-            .setInteractive({ useHandCursor: true })
-            .on('pointerover', () => AjusBtn.setStyle({ color: '#bbbbbb' }))
-            .on('pointerout', () => AjusBtn.setStyle({ color: '#494949' }))
-            .on('pointerdown', () => this.scene.start("AjustesScene"));
-            //música
-            this.backgroundMusic = this.sound.add('Main', {
+      const width = this.scale.width;
+const height = this.scale.height;
+
+// Local Play
+const localBtn = this.add.text(width / 2, height * 0.35, 'Local Play', {
+    fontSize: '32px',
+    color: '#00ff00'
+}).setOrigin(0.5)
+    .setInteractive({ useHandCursor: true })
+    .on('pointerover', () => localBtn.setStyle({ color: '#ffff00' }))
+    .on('pointerout', () => localBtn.setStyle({ color: '#00ff00' }))
+    .on('pointerdown', () => this.startGame());
+
+// Tutorial
+const tutorialBtn = this.add.text(width / 2, height * 0.50, 'Tutorial', {
+    fontSize: '32px',
+    color: '#00ff00'
+}).setOrigin(0.5)
+    .setInteractive({ useHandCursor: true })
+    .on('pointerover', () => tutorialBtn.setStyle({ color: '#ffff00' }))
+    .on('pointerout', () => tutorialBtn.setStyle({ color: '#00ff00' }))
+    .on('pointerdown', () => this.scene.start('TutorialScene'));
+
+// Ajustes
+const AjusBtn = this.add.text(width * 0.85, height * 0.90, 'Ajustes', {
+    fontSize: '32px',
+    color: '#494949'
+}).setOrigin(0.5)
+    .setInteractive({ useHandCursor: true })
+    .on('pointerover', () => AjusBtn.setStyle({ color: '#bbbbbb' }))
+    .on('pointerout', () => AjusBtn.setStyle({ color: '#494949' }))
+    .on('pointerdown', () => this.scene.start('AjustesScene'));
+
+// Música
+this.backgroundMusic = this.sound.add('Main', {
     loop: false,
     volume: 0.7
 });
