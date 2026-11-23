@@ -20,12 +20,12 @@ this.sprite.setDisplaySize(64, 64);
 
 // Configurar físicas
 this.sprite.body.setCollideWorldBounds(true);
-this.sprite.body.setMaxVelocity(600, 1000);
+this.sprite.body.setMaxVelocity(10000, 1000);
 this.sprite.body.setDragX(1000);
 this.sprite.body.setGravityY(1200);
 
 // Tamaño de la hitbox
-this.sprite.body.setSize(74, 124, true);
+this.sprite.body.setSize(84, 333, true);
 
         this.sprite.body.setCollideWorldBounds(true);
 
@@ -47,8 +47,8 @@ this.sprite.body.setSize(74, 124, true);
 
         // Configuración del empuje
         this.pushRadius = 90;
-        this.pushForce = 3000;
-        this.pushUpForce = 180;
+        this.pushForce = 600;
+        this.pushUpForce = 380;
         this.pushCooldown = 700;
         this.lastPush = 0;
 
@@ -70,6 +70,11 @@ this.sprite.body.setSize(74, 124, true);
         // Icono del objeto
         this.itemIcon = null;
 
+        // Control del knockback
+        this.knockbackUntil = 0;
+        this.wasKnockedBack = false;
+        this.knockbackDuration = 200;
+
     }
 
  
@@ -84,8 +89,25 @@ update() {
         currentSpeed *= this.slowMultiplier;
     }
 
+        // Comprobar si está recibiendo un empujón
+    const inKnockback = this.scene.time.now < this.knockbackUntil;
+
+    // Si termina el empujón, recuperar el rozamiento normal
+    if (!inKnockback && this.wasKnockedBack) {
+
+        body.setDragX(1000);
+        this.wasKnockedBack = false;
+
+    }
+
     // Movimiento horizontal
-    if (this.controls.left.isDown) {
+    if (inKnockback) {
+
+        // No permitir que el control contrarreste el empujón
+        body.setAccelerationX(0);
+
+    }
+    else if (this.controls.left.isDown) {
 
         body.setAccelerationX(-this.acceleration);
         this.facing = -1;
@@ -104,7 +126,12 @@ update() {
     }
 
     // Limitar velocidad
-    body.setMaxVelocity(currentSpeed * 2, 1000);
+    if (inKnockback) {
+    body.setMaxVelocity(900, 1000);
+    }
+    else {
+        body.setMaxVelocity(currentSpeed * 2, 1000);
+    }
 
     // Saltar
     if (
@@ -169,6 +196,24 @@ update() {
     }
 }
 
+    applyKnockback(forceX, forceY) {
+
+        const body = this.sprite.body;
+
+        // Desactivar aceleración y rozamiento durante el empujón
+        body.setAccelerationX(0);
+        body.setDragX(0);
+
+        // Activar estado de knockback
+        this.knockbackUntil =
+            this.scene.time.now + this.knockbackDuration;
+
+        this.wasKnockedBack = true;
+
+        // Aplicar impulso
+        body.setVelocity(forceX, forceY);
+
+    }
 
     push() {
 
@@ -215,7 +260,7 @@ update() {
                 const forceY = Math.sin(angle) * this.pushForce;
 
                 // Aplicar impulso al rival
-                player.sprite.body.setVelocity(
+                player.applyKnockback(
                     forceX,
                     forceY - this.pushUpForce
                 );
