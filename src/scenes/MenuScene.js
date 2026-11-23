@@ -54,7 +54,9 @@ this.backgroundMusic = this.sound.add('Main', {
 });
 
 
-this.backgroundMusic.play();
+if (!this.backgroundMusic.isPlaying) {
+    this.backgroundMusic.play();
+}
     }
 
     startGame()
