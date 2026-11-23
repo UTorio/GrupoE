@@ -8,26 +8,26 @@ export class Player {
 
         this.scene = scene;
 
-       // Crear personaje animado
+// Crear personaje animado
 this.sprite = scene.physics.add.sprite(
     x,
     y,
     'walkrun1'
 );
 
-// Tamaño visual del personaje
+// Tamaño visual
 this.sprite.setDisplaySize(64, 64);
 
 // Configurar físicas
-this.sprite.body.setCollideWorldBounds(true);
-this.sprite.body.setMaxVelocity(600, 1000);
-this.sprite.body.setDragX(1000);
-this.sprite.body.setGravityY(1200);
+const body = this.sprite.body;
 
-// Tamaño de la hitbox
-this.sprite.body.setSize(40, 40, true);
+body.setCollideWorldBounds(true);
+body.setMaxVelocity(600, 1000);
+body.setDragX(1000);
+body.setGravityY(1200);
 
-        this.sprite.body.setCollideWorldBounds(true);
+// Hitbox: ahora ocupa casi todo el personaje
+body.setSize(56, 60, true);
 
         // Configurar físicas
         this.sprite.body.setMaxVelocity(600, 1000);
@@ -72,102 +72,103 @@ this.sprite.body.setSize(40, 40, true);
 
     }
 
-  update() {
+ 
+update() {
 
-        const body = this.sprite.body;
+    const body = this.sprite.body;
 
-        // Calcular velocidad máxima
-        let currentSpeed = this.baseSpeed;
+    // Calcular velocidad máxima
+    let currentSpeed = this.baseSpeed;
 
-        if (this.scene.time.now < this.slowUntil) {
-            currentSpeed *= this.slowMultiplier;
-        }
+    if (this.scene.time.now < this.slowUntil) {
+        currentSpeed *= this.slowMultiplier;
+    }
 
-        // Movimiento horizontal basado en aceleración
-        if (this.controls.left.isDown) {
+    // Movimiento horizontal
+    if (this.controls.left.isDown) {
 
-            body.setAccelerationX(-this.acceleration);
-            this.facing = -1;
-
-        }
-        else if (this.controls.right.isDown) {
-
-            body.setAccelerationX(this.acceleration);
-            this.facing = 1;
-
-        }
-        else {
-
-            body.setAccelerationX(0);
-
-        }
-
-        // Limitar velocidad horizontal
-        body.setMaxVelocity(currentSpeed * 2, 1000);
-
-        // Saltar
-        if (Phaser.Input.Keyboard.JustDown(this.controls.up) && body.blocked.down) {
-            body.setVelocityY(-600);
-        }
-
-        // Empujar
-        if (Phaser.Input.Keyboard.JustDown(this.controls.down)) {
-            this.push();
-        }
-
-        // Utilizar objeto
-        if (
-            this.controls.object &&
-            Phaser.Input.Keyboard.JustDown(this.controls.object)
-        ) {
-            this.useItem();
-        }
-
-        // Actualizar posición del círculo
-        this.pushCircle.setPosition(
-            this.sprite.x,
-            this.sprite.y
-        );
-
-        // Actualizar posición del icono
-        if (this.itemIcon) {
-
-            this.itemIcon.setPosition(
-            this.sprite.x,
-            this.sprite.y - 40
-            );
-// Actualizar orientación
-this.sprite.setFlipX(this.facing === -1);
-
-// Comprobar si está en el suelo
-const onGround = body.blocked.down || body.touching.down;
-
-// Comprobar si se mueve
-const moving = Math.abs(body.velocity.x) > 10;
-
-// Elegir animación
-if (!onGround) {
-
-    // Está saltando
-    this.sprite.anims.play('player-jump', true);
-
-}
-else if (moving) {
-
-    // Está caminando o corriendo
-    this.sprite.anims.play('player-walk', true);
-
-}
-else {
-
-    // Está quieto
-    this.sprite.anims.stop();
-    this.sprite.setTexture('walkrun1');
-
-}
-}
+        body.setAccelerationX(-this.acceleration);
+        this.facing = -1;
 
     }
+    else if (this.controls.right.isDown) {
+
+        body.setAccelerationX(this.acceleration);
+        this.facing = 1;
+
+    }
+    else {
+
+        body.setAccelerationX(0);
+
+    }
+
+    // Limitar velocidad
+    body.setMaxVelocity(currentSpeed * 2, 1000);
+
+    // Saltar
+    if (
+        Phaser.Input.Keyboard.JustDown(this.controls.up) &&
+        body.blocked.down
+    ) {
+        body.setVelocityY(-600);
+    }
+
+    // Empujar
+    if (Phaser.Input.Keyboard.JustDown(this.controls.down)) {
+        this.push();
+    }
+
+    // Utilizar objeto
+    if (
+        this.controls.object &&
+        Phaser.Input.Keyboard.JustDown(this.controls.object)
+    ) {
+        this.useItem();
+    }
+
+    // Actualizar círculo de empuje
+    this.pushCircle.setPosition(
+        this.sprite.x,
+        this.sprite.y
+    );
+
+    // Actualizar icono del objeto
+    if (this.itemIcon) {
+        this.itemIcon.setPosition(
+            this.sprite.x,
+            this.sprite.y - 40
+        );
+    }
+
+    // GIRAR PERSONAJE
+    this.sprite.setFlipX(this.facing === -1);
+
+    // Comprobar si está en el suelo
+    const onGround = body.blocked.down || body.touching.down;
+
+    // Comprobar movimiento
+    const moving = Math.abs(body.velocity.x) > 10;
+
+    // Elegir animación
+    if (!onGround) {
+
+        this.sprite.anims.play('player-jump', true);
+
+    }
+    else if (moving) {
+
+        this.sprite.anims.play('player-walk', true);
+
+    }
+    else {
+
+        this.sprite.anims.stop();
+        this.sprite.setTexture('walkrun1');
+
+    }
+}
+
 
     push() {
 
@@ -222,7 +223,8 @@ else {
             }
 
         });
-
+        // Girar el personaje según la dirección
+this.sprite.setFlipX(this.facing === -1);
     }
 
     applySlow(duration, multiplier) {
