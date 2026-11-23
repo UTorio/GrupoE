@@ -42,11 +42,11 @@ const tutorialBtn = this.add.text(width / 2, height * 0.50, 'Tutorial', {
 // Ajustes
 const AjusBtn = this.add.text(width * 0.85, height * 0.90, 'Ajustes', {
     fontSize: '32px',
-    color: '#494949'
+    color: '#000000'
 }).setOrigin(0.5)
     .setInteractive({ useHandCursor: true })
-    .on('pointerover', () => AjusBtn.setStyle({ color: '#bbbbbb' }))
-    .on('pointerout', () => AjusBtn.setStyle({ color: '#494949' }))
+    .on('pointerover', () => AjusBtn.setStyle({ color: '#000000' }))
+    .on('pointerout', () => AjusBtn.setStyle({ color: '#a7a7a7' }))
     .on('pointerdown', () => this.scene.start('AjustesScene'));
 
 // Música
