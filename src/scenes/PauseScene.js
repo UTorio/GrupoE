@@ -30,7 +30,7 @@ export class PauseScene extends Phaser.Scene {
         this.add.text(
             width / 2,
             height / 2 - 120,
-            'PAWSA',
+            'PAUSA',
             {
                 fontSize: '64px',
                 color: '#ffffff',
