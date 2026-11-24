@@ -44,9 +44,11 @@ export class PauseScene extends Phaser.Scene {
             height / 2,
             'CONTINUAR',
             () => {
-                this.sound.play('Click', { volume: 0.1 });
+                const runScene = this.scene.get('RunScene');
+                runScene.sound.resumeAll();
                 this.scene.stop();
                 this.scene.resume('RunScene');
+                runScene.sound.play('Click', { volume: 0.1 });
             }
         );
 
@@ -58,8 +60,9 @@ export class PauseScene extends Phaser.Scene {
             () => {
                 this.sound.play('Click', { volume: 0.1 });
                 this.scene.stop('RunScene');
-                this.scene.start('MenuScene');
                 this.sound.stopAll();
+                this.scene.stop();
+                this.scene.start('MenuScene');
             }
         );
 
@@ -104,9 +107,11 @@ export class PauseScene extends Phaser.Scene {
             Phaser.Input.Keyboard.JustDown(this.pauseKeys.escape) ||
             Phaser.Input.Keyboard.JustDown(this.pauseKeys.p)
         ) {
+            const runScene = this.scene.get('RunScene');
+            runScene.sound.resumeAll();
             this.scene.stop();
             this.scene.resume('RunScene');
-            this.sound.stopAll();
+            runScene.sound.play('Click', { volume: 0.1 });
         }
     }
 }
