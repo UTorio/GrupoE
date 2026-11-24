@@ -65,7 +65,7 @@ export class GameMap {
 
     }
 
-    addPlatform(x, y, width, height, color = 0x777777) {
+    addPlatform(x, y, width, height, color = 0xBABA66) {
 
         const platform = new Platform(
             this.scene, x, y, width, height, color
