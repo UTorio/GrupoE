@@ -28,10 +28,10 @@ export class TurboItem extends Item {
         const direction = player.facing || 1;
 
         // Impulso horizontal
-        body.setVelocityX(direction * 550);
+        body.setVelocityX(direction * 3550);
 
         // Pequeño impulso vertical
-        body.setVelocityY(-180);
+        body.setVelocityY(-400);
 
     }
 
