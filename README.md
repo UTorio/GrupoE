@@ -253,6 +253,7 @@ Los bocetos de los personajes se encuentran en el apartado [4.2](#42-personajes)
 | ~Whimsical Waves | Partida | Eurobeat, rápido y enérgico con toques cómicos | Propia |
 | Glory = True; | Victoria | Pequeña melodía alegre/satisfactoria | Propia |
 | Synthetic tears | Derrota | Es un "sad trombone" con algunos retoques para adecuarse al estilo del juego | Propia |
+| Fanfaerie | Por decidir | Fanfarria simple típica como las que suenan al comienzo de competiciones | Propia |
 
 ### 6.2. Efectos de sonido
 
