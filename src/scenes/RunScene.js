@@ -144,6 +144,57 @@ this.finish = this.add.rectangle(
     0.3
 );
 
+// Salida
+
+this.startWallX = 550;
+
+this.startWall = this.add.rectangle(
+    this.startWallX,
+    this.map.height / 2,
+    30,
+    this.map.height,
+    0xff0000,
+    0.35
+);
+
+this.physics.add.existing(this.startWall, true);
+
+// Colisión de ambos jugadores con la pared
+this.players.forEach(player => {
+    this.physics.add.collider(
+        player.sprite,
+        this.startWall
+    );
+});
+
+// Cuenta atrás
+
+this.countdownFinished = false;
+
+this.countdownValue = 3;
+
+// Texto de cuenta atrás
+this.countdownText = this.add.text(
+    this.cameras.main.centerX,
+    150,
+    '3',
+    {
+        fontSize: '110px',
+        color: '#ffff00',
+        fontStyle: 'bold',
+        stroke: '#000000',
+        strokeThickness: 10
+    }
+);
+
+this.countdownText.setOrigin(0.5);
+this.countdownText.setScrollFactor(0);
+this.countdownText.setDepth(2000);
+
+// Iniciar cuenta atrás
+this.startCountdown();
+
+
 // Cajas de objetos
 this.HappyMeals = [
 
@@ -374,6 +425,56 @@ createPlayerAnimations() {
         repeat: 1000000
     });
 
+
+}
+
+startCountdown() {
+
+    this.countdownValue = 3;
+
+    this.countdownText.setText('3');
+
+    this.countdownTimer = this.time.addEvent({
+
+        delay: 1000,
+
+        repeat: 3,
+
+        callback: () => {
+
+            this.countdownValue--;
+
+            if (this.countdownValue > 0) {
+
+                this.countdownText.setText(
+                    this.countdownValue.toString()
+                );
+
+            } else {
+
+                // ¡COMIENZA LA CARRERA!
+
+                this.countdownText.setText('¡YA!');
+
+                // Destruir la pared
+                this.startWall.destroy();
+
+                this.countdownFinished = true;
+
+                // Desaparecer el texto después de un instante
+                this.time.delayedCall(500, () => {
+
+                    this.countdownText.destroy();
+
+                });
+
+            }
+
+        },
+
+        callbackScope: this
+
+    });
 
 }
 
