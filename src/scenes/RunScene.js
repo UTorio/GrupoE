@@ -133,6 +133,18 @@ this.enemy1 = new Yuliya(
         slowMultiplier: 0.5
     }
 );
+this.enemy2 = new Yuliya(
+    this,
+    2550,
+    380,
+    { x: 1, y: 0 },
+    {
+        fireRate: 2000,
+        projectileSpeed: 350,
+        slowDuration: 2000,
+        slowMultiplier: 0.5
+    }
+);
 
 // META
 this.finish = this.add.rectangle(
@@ -200,7 +212,8 @@ this.HappyMeals = [
 
     new HappyMeal(this, 700, 400),
     new HappyMeal(this, 1400, 400),
-    new HappyMeal(this, 2200, 400)
+    new HappyMeal(this, 2610, 510),
+    new HappyMeal(this, 3500, 300)
 
 ];
 
