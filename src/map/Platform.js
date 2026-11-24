@@ -1,7 +1,7 @@
 
 export class Platform {
 
-    constructor(scene, x, y, width, height, color = 0x777777) {
+    constructor(scene, x, y, width, height, color = 0xBABA66) {
 
         this.sprite = scene.add.rectangle(
             x + width / 2,

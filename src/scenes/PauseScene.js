@@ -6,7 +6,11 @@ export class PauseScene extends Phaser.Scene {
     constructor() {
         super('PauseScene');
     }
-
+    preload()
+    {
+        this.load.audio('Click', '/assets/audio/Fairy_Lab_Run__Click.wav');
+        this.load.audio('PasarR', '/assets/audio/Fairy_Lab_Run__PasarRaton.wav');
+    }
     create() {
 
         const width = this.scale.width;
@@ -26,7 +30,7 @@ export class PauseScene extends Phaser.Scene {
         this.add.text(
             width / 2,
             height / 2 - 120,
-            'PAUSA',
+            'PAWSA',
             {
                 fontSize: '64px',
                 color: '#ffffff',
@@ -40,6 +44,7 @@ export class PauseScene extends Phaser.Scene {
             height / 2,
             'CONTINUAR',
             () => {
+                this.sound.play('Click', { volume: 0.1 });
                 this.scene.stop();
                 this.scene.resume('RunScene');
             }
@@ -51,6 +56,7 @@ export class PauseScene extends Phaser.Scene {
             height / 2 + 80,
             'MENÚ PRINCIPAL',
             () => {
+                this.sound.play('Click', { volume: 0.1 });
                 this.scene.stop('RunScene');
                 this.scene.start('MenuScene');
                 this.sound.stopAll();
@@ -80,6 +86,7 @@ export class PauseScene extends Phaser.Scene {
         .setInteractive({ useHandCursor: true });
 
         button.on('pointerover', () => {
+            this.sound.play('PasarR', { volume: 0.5 });
             button.setStyle({ color: '#ffff00' });
         });
 

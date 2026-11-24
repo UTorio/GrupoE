@@ -21,7 +21,7 @@ export class GameMap {
     create() {
 
         // Suelo principal
-        this.addPlatform(0, 560, 6000, 4000, 0x555555);
+        this.addPlatform(0, 560, 6000, 4000, 0x55BB55);
 
         // Plataformas de prueba
         this.addPlatform(500, 470, 180, 20);
@@ -65,7 +65,7 @@ export class GameMap {
 
     }
 
-    addPlatform(x, y, width, height, color = 0x777777) {
+    addPlatform(x, y, width, height, color = 0xBABA66) {
 
         const platform = new Platform(
             this.scene, x, y, width, height, color

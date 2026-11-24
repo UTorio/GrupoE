@@ -8,6 +8,8 @@ export class TutorialScene extends Phaser.Scene {
 preload()
 {
         this.load.image('fondo', '/img/Fondo.png');
+        this.load.audio('Click', '/assets/audio/Fairy_Lab_Run__Click.wav');
+        this.load.audio('PasarR', '/assets/audio/Fairy_Lab_Run__PasarRaton.wav'); 
 } 
     create() {
     createBackground(this);
@@ -55,10 +57,14 @@ preload()
     color: '#00ff00'
 }).setOrigin(0.5)
     .setInteractive({ useHandCursor: true })
-    .on('pointerover', () => Exit.setStyle({ color: '#ffff00' }))
+    .on('pointerover', () => {
+        this.sound.play('PasarR', { volume: 0.2 });
+        Exit.setStyle({ color: '#ffff00' });
+    })
     .on('pointerout', () => Exit.setStyle({ color: '#00ff00' }))
     .on('pointerdown', () => {
         this.sound.stopAll();
+        this.sound.play('Click', { volume: 0.1 });
         this.scene.start('MenuScene');
     });
     }

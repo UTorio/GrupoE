@@ -9,6 +9,8 @@ export class AjustesScene extends Phaser.Scene {
 preload()
 {
         this.load.image('fondo', '/img/Fondo.png');
+        this.load.audio('Click', '/assets/audio/Fairy_Lab_Run__Click.wav');
+        this.load.audio('PasarR', '/assets/audio/Fairy_Lab_Run__PasarRaton.wav');
 }
     create() {
     createBackground(this);
@@ -89,9 +91,17 @@ preload()
                 padding: { x: 20, y: 10 }
             }
         ).setOrigin(0.5).setInteractive({ useHandCursor: true });
+        back.on('pointerover', () => {
+            this.sound.play('PasarR', { volume: 0.5 });
+            back.setStyle({ color: '#ffff00' });
+        });
+        back.on('pointerout', () => {
+            back.setStyle({ color: '#ffffff' });
+        });
         back.on('pointerdown', () => {
-            this.scene.start('MenuScene');
             this.sound.stopAll();
+            this.sound.play('Click', { volume: 0.1 });
+            this.scene.start('MenuScene');
         });
     }
 }
