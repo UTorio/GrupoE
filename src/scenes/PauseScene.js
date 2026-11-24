@@ -53,6 +53,7 @@ export class PauseScene extends Phaser.Scene {
             () => {
                 this.scene.stop('RunScene');
                 this.scene.start('MenuScene');
+                this.sound.stopAll();
             }
         );
 
