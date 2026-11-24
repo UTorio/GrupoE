@@ -4,7 +4,7 @@ import Phaser from 'phaser';
 
 export class Player {
 
-    constructor(scene, x, y, controls) {
+    constructor(scene, x, y, controls,color) {
 
         this.scene = scene;
 
@@ -17,7 +17,7 @@ this.sprite = scene.physics.add.sprite(
 
 // Tamaño visual del personaje
 this.sprite.setDisplaySize(64, 64);
-
+this.sprite.setTint(color);
 // Configurar físicas
 this.sprite.body.setCollideWorldBounds(true);
 this.sprite.body.setMaxVelocity(10000, 1000);

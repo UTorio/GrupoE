@@ -81,7 +81,7 @@ this.player1 = new Player(
         right: 'RIGHT',
         down: 'DOWN',
         object: 'L'
-    }
+    }, 0x21A7C2
 );
 
 // Jugador 2: WASD
@@ -95,7 +95,7 @@ this.player2 = new Player(
         right: 'D',
         down: 'S',
         object: 'T'
-    }
+    }, 0xC23C21
 );
 this.players = [this.player1, this.player2];
 // Crear mapa
