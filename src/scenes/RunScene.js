@@ -139,7 +139,7 @@ this.finish = this.add.rectangle(
     this.map.width - 100,
     500,
     20,
-    160,
+    360,
     0xffff00,
     0.3
 );
@@ -436,7 +436,7 @@ startCountdown() {
 
     this.countdownTimer = this.time.addEvent({
 
-        delay: 1000,
+        delay: 1250,
 
         repeat: 3,
 
